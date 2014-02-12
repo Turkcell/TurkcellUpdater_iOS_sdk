@@ -50,6 +50,8 @@
 		02F2841A16DBAFB500BD4D39 /* TestUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841616DBAFB500BD4D39 /* TestUpdateCheck.m */; };
 		02F2841B16DBAFB500BD4D39 /* TestUpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */; };
 		98A6075918A81B4E00DBE61B /* UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C421B17990A3E008497DA /* UDID.m */; };
+		98F3BCFE18AC341B00138A0A /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFB18AC341B00138A0A /* FLImageView.m */; };
+		98F3BCFF18AC341B00138A0A /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFD18AC341B00138A0A /* FullyLoaded.m */; };
 		BE0C3BCE1796A0BC00DE5714 /* UpdaterController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840316D7BCED00BD4D39 /* UpdaterController.h */; };
 		BE0C3BCF1796A0BC00DE5714 /* UpdaterControllerDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840516D7BCED00BD4D39 /* UpdaterControllerDelegate.h */; };
 		BE3C421D17990A3E008497DA /* UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C421B17990A3E008497DA /* UDID.m */; };
@@ -114,6 +116,10 @@
 		02F2841716DBAFB500BD4D39 /* TestUpdateServerIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUpdateServerIntegration.h; sourceTree = "<group>"; };
 		02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUpdateServerIntegration.m; sourceTree = "<group>"; };
 		98B77E7718851CEE004B7362 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = SOURCE_ROOT; };
+		98F3BCFA18AC341B00138A0A /* FLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLImageView.h; sourceTree = "<group>"; };
+		98F3BCFB18AC341B00138A0A /* FLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLImageView.m; sourceTree = "<group>"; };
+		98F3BCFC18AC341B00138A0A /* FullyLoaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullyLoaded.h; sourceTree = "<group>"; };
+		98F3BCFD18AC341B00138A0A /* FullyLoaded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullyLoaded.m; sourceTree = "<group>"; };
 		BE3C421A17990A3E008497DA /* UDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDID.h; sourceTree = "<group>"; };
 		BE3C421B17990A3E008497DA /* UDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +180,10 @@
 		023F152316B1338700496854 /* TurkcellUpdater */ = {
 			isa = PBXGroup;
 			children = (
+				98F3BCFA18AC341B00138A0A /* FLImageView.h */,
+				98F3BCFB18AC341B00138A0A /* FLImageView.m */,
+				98F3BCFC18AC341B00138A0A /* FullyLoaded.h */,
+				98F3BCFD18AC341B00138A0A /* FullyLoaded.m */,
 				98B77E7718851CEE004B7362 /* version.h */,
 				BE3C421A17990A3E008497DA /* UDID.h */,
 				BE3C421B17990A3E008497DA /* UDID.m */,
@@ -362,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F2840816D7BCED00BD4D39 /* Configuration.m in Sources */,
+				98F3BCFF18AC341B00138A0A /* FullyLoaded.m in Sources */,
 				02F2840916D7BCED00BD4D39 /* Controller.m in Sources */,
 				02F2840A16D7BCED00BD4D39 /* Filter.m in Sources */,
 				02F2840B16D7BCED00BD4D39 /* Message.m in Sources */,
@@ -370,6 +381,7 @@
 				BE3C421D17990A3E008497DA /* UDID.m in Sources */,
 				02F2840E16D7BCED00BD4D39 /* UpdaterController.m in Sources */,
 				02F2840F16D7BCED00BD4D39 /* UpdateServerIntegration.m in Sources */,
+				98F3BCFE18AC341B00138A0A /* FLImageView.m in Sources */,
 				02284CB91701BB12003835FA /* MessageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

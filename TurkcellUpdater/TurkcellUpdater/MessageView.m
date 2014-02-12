@@ -27,6 +27,23 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Message.h"
 #import <UIKit/UIKit.h>
+#import "FLImageView.h"
+
+@implementation UIImage (JTColor)
+
++ (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    // Create a 1 by 1 pixel context
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    [color setFill];
+    UIRectFill(rect);   // Fill it with your color
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+@end
+
 
 @implementation MessageView
 
@@ -76,10 +93,10 @@
     
     if ([imageUrl length] > 0) {
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, imageViewY, 100, 100)];
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-        UIImage *image = [UIImage imageWithData:imageData];
-        [imageView setImage:image];
+
+        FLImageView *imageView = [[FLImageView alloc] initWithFrame:CGRectMake(10, imageViewY, 100, 100)];
+        [imageView loadImageAtURLString:imageUrl placeholderImage:[UIImage imageWithColor:[UIColor lightGrayColor]]];
+
         [[messageView view] addSubview:imageView];
         messageLabelX = 120;
         messageLabelWidth = 170;

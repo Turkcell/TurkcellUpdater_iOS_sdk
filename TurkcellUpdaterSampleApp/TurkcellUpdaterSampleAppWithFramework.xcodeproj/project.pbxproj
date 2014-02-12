@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		98A6075D18A8290F00DBE61B /* TurkcellUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A6075C18A8290F00DBE61B /* TurkcellUpdater.framework */; };
+		98F3BD0118AC35A100138A0A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F3BD0018AC35A100138A0A /* AdSupport.framework */; };
 		BE2D1C8E179B46CD00087D66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D1C8D179B46CD00087D66 /* UIKit.framework */; };
 		BE2D1C90179B46CD00087D66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D1C8F179B46CD00087D66 /* Foundation.framework */; };
 		BE2D1C92179B46CD00087D66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D1C91179B46CD00087D66 /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		98A6075C18A8290F00DBE61B /* TurkcellUpdater.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TurkcellUpdater.framework; path = "../../../../../Users/Tanhan12/Library/Developer/Xcode/DerivedData/TurkcellUpdater-gqrblvmxbbqjxcgyktzjbmkrcfvm/Build/Products/Prod-iphoneuniversal/TurkcellUpdater.framework"; sourceTree = "<group>"; };
+		98F3BD0018AC35A100138A0A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BE2D1C8A179B46CD00087D66 /* TurkcellUpdaterSampleAppWithFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkcellUpdaterSampleAppWithFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D1C8D179B46CD00087D66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE2D1C8F179B46CD00087D66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F3BD0118AC35A100138A0A /* AdSupport.framework in Frameworks */,
 				98A6075D18A8290F00DBE61B /* TurkcellUpdater.framework in Frameworks */,
 				BE2D1C8E179B46CD00087D66 /* UIKit.framework in Frameworks */,
 				BE2D1C90179B46CD00087D66 /* Foundation.framework in Frameworks */,
@@ -80,6 +83,7 @@
 		BE2D1C8C179B46CD00087D66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				98F3BD0018AC35A100138A0A /* AdSupport.framework */,
 				98A6075C18A8290F00DBE61B /* TurkcellUpdater.framework */,
 				BE2D1C8D179B46CD00087D66 /* UIKit.framework */,
 				BE2D1C8F179B46CD00087D66 /* Foundation.framework */,
