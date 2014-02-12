@@ -1,0 +1,15 @@
+//
+// Prefix header for all source files of the 'TurkcellUpdater' target in the 'TurkcellUpdater' project
+//
+
+#ifndef DEBUG
+#	define DLog(...)
+#else
+#	define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#endif
+
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>update_required</key>
+	<string>Güncelleme gerekli</string>
+	<key>update_found</key>
+	<string>Güncelleme bulundu</string>
+	<key>install_</key>
+	<string>Kur </string>
+	<key>downloading_new_version</key>
+	<string>Yeni versiyon indiriliyor...</string>
+	<key>exit_application</key>
+	<string>Uygulamadan çık</string>
+	<key>remind_me_later</key>
+	<string>Daha sonra hatırlat</string>
+	<key>error_occured</key>
+	<string>Hata oluştu</string>
+	<key>update_couldn_t_be_completed</key>
+	<string>Güncelleme tamamlanamadı</string>
+	<key>continue_</key>
+	<string>Devam et</string>
+	<key>view</key>
+	<string>Görüntüle</string>
+	<key>close</key>
+	<string>Kapat</string>
+	<key>service_is_not_available</key>
+	<string>Hizmet kullanılamıyor</string>
+	<key>launch</key>
+	<string>Çalıştır</string>
+</dict>
+</plist>
