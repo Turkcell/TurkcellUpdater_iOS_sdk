@@ -191,7 +191,7 @@ Type: Object
 					"message": "New application is avaliable!",
 					"imageUrl": "http://example.com/app2-icon.png"
 					"whatIsNew": "Minor bug fixes",
-        				"warnings": "New version requires additional privileges"  
+					"warnings": "New version requires additional privileges"  
 				}
 			},
 			"maxDisplayCount": 3
@@ -946,7 +946,7 @@ Fully qualified URL of image file that is displayed in message dialog. It should
 	"message": "New application is avaliable!",
 	"imageUrl": "http://example.com/app2-icon.png"
 	"whatIsNew": "Minor bug fixes",
-        "warnings": "New version requires additional privileges"                    
+	"warnings": "New version requires additional privileges"                    
 
 }
 </code>
