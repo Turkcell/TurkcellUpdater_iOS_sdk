@@ -49,6 +49,7 @@
 		02F2841916DBAFB500BD4D39 /* TestFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841416DBAFB500BD4D39 /* TestFilter.m */; };
 		02F2841A16DBAFB500BD4D39 /* TestUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841616DBAFB500BD4D39 /* TestUpdateCheck.m */; };
 		02F2841B16DBAFB500BD4D39 /* TestUpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */; };
+		9878A2BF18B8F0D00080D00F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */; };
 		98A6075918A81B4E00DBE61B /* UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C421B17990A3E008497DA /* UDID.m */; };
 		98F3BCFE18AC341B00138A0A /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFB18AC341B00138A0A /* FLImageView.m */; };
 		98F3BCFF18AC341B00138A0A /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFD18AC341B00138A0A /* FullyLoaded.m */; };
@@ -115,6 +116,8 @@
 		02F2841616DBAFB500BD4D39 /* TestUpdateCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUpdateCheck.m; sourceTree = "<group>"; };
 		02F2841716DBAFB500BD4D39 /* TestUpdateServerIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUpdateServerIntegration.h; sourceTree = "<group>"; };
 		02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUpdateServerIntegration.m; sourceTree = "<group>"; };
+		9878A2BD18B8F0D00080D00F /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		98B77E7718851CEE004B7362 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = SOURCE_ROOT; };
 		98F3BCFA18AC341B00138A0A /* FLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLImageView.h; sourceTree = "<group>"; };
 		98F3BCFB18AC341B00138A0A /* FLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLImageView.m; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				98F3BCFB18AC341B00138A0A /* FLImageView.m */,
 				98F3BCFC18AC341B00138A0A /* FullyLoaded.h */,
 				98F3BCFD18AC341B00138A0A /* FullyLoaded.m */,
+				9878A2BD18B8F0D00080D00F /* CustomIOS7AlertView.h */,
+				9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */,
 				98B77E7718851CEE004B7362 /* version.h */,
 				BE3C421A17990A3E008497DA /* UDID.h */,
 				BE3C421B17990A3E008497DA /* UDID.m */,
@@ -348,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nSIMULATOR_LIBRARY_INCLUDE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/include/${PRODUCT_NAME}\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nBUNDLE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}Bundle.bundle\" &&\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo -create \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\ncp \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}/Versions/A\" &&\nln -s \"A\" \"${FRAMEWORK}/Versions/Current\" &&\nln -s \"Versions/Current/Headers\" \"${FRAMEWORK}/Headers\" &&\nln -s \"Versions/Current/Resources\" \"${FRAMEWORK}/Resources\" &&\nln -s \"Versions/Current/${PRODUCT_NAME}\" \"${FRAMEWORK}/${PRODUCT_NAME}\" &&\n\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/UpdaterController.h\" \"${FRAMEWORK}/Headers/\" &&\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/UpdateCheckDelegate.h\" \"${FRAMEWORK}/Headers/\" &&\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/MessageViewDelegate.h\" \"${FRAMEWORK}/Headers/\" &&\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/MessageView.h\" \"${FRAMEWORK}/Headers/\" &&\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/UpdaterControllerDelegate.h\" \"${FRAMEWORK}/Headers/\"\n\n#&&\n\n#cp -r \"${BUNDLE_LIBRARY_PATH}\" \"${FRAMEWORK}/Resources/\"";
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nSIMULATOR_LIBRARY_INCLUDE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/include/${PRODUCT_NAME}\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nBUNDLE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}Bundle.bundle\" &&\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo -create \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\ncp \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}/Versions/A\" &&\nln -s \"A\" \"${FRAMEWORK}/Versions/Current\" &&\nln -s \"Versions/Current/Headers\" \"${FRAMEWORK}/Headers\" &&\nln -s \"Versions/Current/Resources\" \"${FRAMEWORK}/Resources\" &&\nln -s \"Versions/Current/${PRODUCT_NAME}\" \"${FRAMEWORK}/${PRODUCT_NAME}\" &&\n\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/UpdaterController.h\" \"${FRAMEWORK}/Headers/\" &&\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/UpdaterControllerDelegate.h\" \"${FRAMEWORK}/Headers/\"\n\n#&&\n\n#cp -r \"${BUNDLE_LIBRARY_PATH}\" \"${FRAMEWORK}/Resources/\"";
 		};
 		BEBB4B021795622E006FFC08 /* Build Static Libs */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -371,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9878A2BF18B8F0D00080D00F /* CustomIOS7AlertView.m in Sources */,
 				02F2840816D7BCED00BD4D39 /* Configuration.m in Sources */,
 				98F3BCFF18AC341B00138A0A /* FullyLoaded.m in Sources */,
 				02F2840916D7BCED00BD4D39 /* Controller.m in Sources */,

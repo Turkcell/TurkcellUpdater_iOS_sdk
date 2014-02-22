@@ -24,16 +24,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UpdateCheckDelegate.h"
 #import "UpdaterControllerDelegate.h"
-#import "MessageViewDelegate.h"
-#import "MessageView.h"
 
-@interface UpdaterController : UIView <UpdateCheckDelegate, UIAlertViewDelegate, MessageViewDelegate>
+@interface UpdaterController : UIView <UIAlertViewDelegate>
 
 @property (nonatomic, retain) NSString *updateServerURL;
 @property (nonatomic, retain) id<UpdaterControllerDelegate> updaterControllerDelegate;
-@property (nonatomic, retain) MessageView *messageView;
 @property (nonatomic, assign) BOOL postProperties;
 
 + (UpdaterController *) initWithUpdateURL:(NSString *)URL
@@ -43,3 +39,4 @@
 - (void) getUpdateInformation;
 
 @end
+
