@@ -91,7 +91,7 @@
 }
 
 + (NSString *) uniqueGlobalDeviceIdentifier{
-    if (NSClassFromString(@"ASIdentifierManager")){
+    /*if (NSClassFromString(@"ASIdentifierManager")){
         ASIdentifierManager *adIdentManager = [ASIdentifierManager sharedManager];
         if (adIdentManager.advertisingTrackingEnabled) {
             return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
@@ -102,7 +102,9 @@
     NSString *macaddress = [UDID macaddress];
     NSString *uniqueIdentifier = [UDID stringFromMD5:macaddress];
     
-    return uniqueIdentifier;
+    return uniqueIdentifier;*/
+    
+    return @"";
 }
 
 + (NSString *)stringFromMD5:(NSString *)stringToConvert
