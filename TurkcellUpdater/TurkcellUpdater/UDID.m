@@ -8,7 +8,7 @@
 
 #import "UDID.h"
 #import <CommonCrypto/CommonDigest.h>
-#import <AdSupport/ASIdentifierManager.h>
+//#import <AdSupport/ASIdentifierManager.h>
 
 #include <sys/socket.h> // Per msqr
 #include <sys/sysctl.h>
