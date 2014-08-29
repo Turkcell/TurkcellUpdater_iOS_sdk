@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    self.urlTextField.text = @"http://localhost:8080/iphone_messages.json";
+    self.urlTextField.text = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
     self.switchButton.on = NO;
 }
 

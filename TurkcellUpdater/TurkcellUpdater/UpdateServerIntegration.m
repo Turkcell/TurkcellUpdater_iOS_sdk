@@ -94,8 +94,7 @@
                         KEY_DEVICE_OS_NAME: [propertyDictionary valueForKey:KEY_DEVICE_OS_NAME],
                         KEY_DEVICE_MODEL: [propertyDictionary valueForKey:KEY_DEVICE_MODEL],
                         KEY_DEVICE_IS_TABLET: [propertyDictionary valueForKey:KEY_DEVICE_IS_TABLET],
-                        KEY_DEVICE_LANGUAGE: [propertyDictionary valueForKey:KEY_DEVICE_LANGUAGE],
-                        KEY_DEVICE_ID: [propertyDictionary valueForKey:KEY_DEVICE_ID]
+                        KEY_DEVICE_LANGUAGE: [propertyDictionary valueForKey:KEY_DEVICE_LANGUAGE]
                         }
                         options:0
                         error:&error];

@@ -50,12 +50,10 @@
 		02F2841A16DBAFB500BD4D39 /* TestUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841616DBAFB500BD4D39 /* TestUpdateCheck.m */; };
 		02F2841B16DBAFB500BD4D39 /* TestUpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */; };
 		9878A2BF18B8F0D00080D00F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */; };
-		98A6075918A81B4E00DBE61B /* UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C421B17990A3E008497DA /* UDID.m */; };
 		98F3BCFE18AC341B00138A0A /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFB18AC341B00138A0A /* FLImageView.m */; };
 		98F3BCFF18AC341B00138A0A /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFD18AC341B00138A0A /* FullyLoaded.m */; };
 		BE0C3BCE1796A0BC00DE5714 /* UpdaterController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840316D7BCED00BD4D39 /* UpdaterController.h */; };
 		BE0C3BCF1796A0BC00DE5714 /* UpdaterControllerDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840516D7BCED00BD4D39 /* UpdaterControllerDelegate.h */; };
-		BE3C421D17990A3E008497DA /* UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C421B17990A3E008497DA /* UDID.m */; };
 		BEACBD0C1796C52D00769970 /* UpdateCheckDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840116D7BCED00BD4D39 /* UpdateCheckDelegate.h */; };
 		BEACBD0D1796C53A00769970 /* MessageViewDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02DBC2EB1702DDE300BDEAB3 /* MessageViewDelegate.h */; };
 		BEACBD0E1796C54A00769970 /* MessageView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02284CB71701BB12003835FA /* MessageView.h */; };
@@ -123,8 +121,6 @@
 		98F3BCFB18AC341B00138A0A /* FLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLImageView.m; sourceTree = "<group>"; };
 		98F3BCFC18AC341B00138A0A /* FullyLoaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullyLoaded.h; sourceTree = "<group>"; };
 		98F3BCFD18AC341B00138A0A /* FullyLoaded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullyLoaded.m; sourceTree = "<group>"; };
-		BE3C421A17990A3E008497DA /* UDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDID.h; sourceTree = "<group>"; };
-		BE3C421B17990A3E008497DA /* UDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +186,6 @@
 				9878A2BD18B8F0D00080D00F /* CustomIOS7AlertView.h */,
 				9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */,
 				98B77E7718851CEE004B7362 /* version.h */,
-				BE3C421A17990A3E008497DA /* UDID.h */,
-				BE3C421B17990A3E008497DA /* UDID.m */,
 				02F283F516D7BCED00BD4D39 /* Configuration.h */,
 				02F283F616D7BCED00BD4D39 /* Configuration.m */,
 				02F283F716D7BCED00BD4D39 /* Controller.h */,
@@ -384,7 +378,6 @@
 				02F2840B16D7BCED00BD4D39 /* Message.m in Sources */,
 				02F2840C16D7BCED00BD4D39 /* UIAlertViewCustom.m in Sources */,
 				02F2840D16D7BCED00BD4D39 /* UpdateCheck.m in Sources */,
-				BE3C421D17990A3E008497DA /* UDID.m in Sources */,
 				02F2840E16D7BCED00BD4D39 /* UpdaterController.m in Sources */,
 				02F2840F16D7BCED00BD4D39 /* UpdateServerIntegration.m in Sources */,
 				98F3BCFE18AC341B00138A0A /* FLImageView.m in Sources */,
@@ -396,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98A6075918A81B4E00DBE61B /* UDID.m in Sources */,
 				027F3F1C1705B807001678BA /* Configuration.m in Sources */,
 				027F3F1D1705B807001678BA /* Controller.m in Sources */,
 				027F3F1E1705B807001678BA /* Filter.m in Sources */,

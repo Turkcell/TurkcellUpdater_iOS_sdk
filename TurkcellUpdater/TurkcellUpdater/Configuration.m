@@ -24,7 +24,6 @@
 //
 
 #import "Configuration.h"
-#import "UDID.h"
 #import <sys/utsname.h>
 
 /**
@@ -117,7 +116,6 @@ NSString * const KEY_DEVICE_ID = @"deviceId";
     
     [propertyDictionary setValue:language forKey:KEY_DEVICE_LANGUAGE];
     
-    [propertyDictionary setValue:[UDID uniqueDeviceIdentifier] forKey:KEY_DEVICE_ID];
     return propertyDictionary;
     
 /*
