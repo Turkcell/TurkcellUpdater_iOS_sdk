@@ -20,7 +20,7 @@
 //  TurkcellUpdaterSampleApp
 //
 //  Created by Sonat Karakas on 1/11/13.
-//  Copyright (c) 2013 Sonat Karakas. All rights reserved.
+//  Copyright (c) 2013 Turkcell. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
