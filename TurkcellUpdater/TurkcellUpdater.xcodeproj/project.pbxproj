@@ -280,7 +280,7 @@
 			name = TurkcellUpdaterTests;
 			productName = TurkcellUpdaterTests;
 			productReference = 023F152F16B1338800496854 /* TurkcellUpdaterTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -485,7 +485,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Debug;
 		};
@@ -500,7 +500,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Release;
 		};
@@ -546,7 +546,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = TurkcellUpdater;
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Debug;
 		};
@@ -556,7 +556,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Turkcell Iletisim Hizmetleri A. S.";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = TurkcellUpdater;
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Release;
 		};
