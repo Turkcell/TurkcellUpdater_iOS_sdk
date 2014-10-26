@@ -6,254 +6,206 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		BEBB4AFD179561CA006FFC08 /* TurkcellUpdaterFramework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = BEBB4B00179561CA006FFC08 /* Build configuration list for PBXAggregateTarget "TurkcellUpdaterFramework" */;
-			buildPhases = (
-				BEBB4B021795622E006FFC08 /* Build Static Libs */,
-				BE1E97851796955F005BE4FB /* Build Universal Framework */,
-			);
-			dependencies = (
-			);
-			name = TurkcellUpdaterFramework;
-			productName = TurkcellUpdaterFramework;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		02284CB91701BB12003835FA /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02284CB81701BB12003835FA /* MessageView.m */; };
-		023F152216B1338700496854 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F152116B1338700496854 /* Foundation.framework */; };
-		023F153116B1338800496854 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F153016B1338800496854 /* SenTestingKit.framework */; };
-		023F153416B1338800496854 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F152116B1338700496854 /* Foundation.framework */; };
-		023F153D16B1338800496854 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 023F153B16B1338800496854 /* InfoPlist.strings */; };
-		027F3F1C1705B807001678BA /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283F616D7BCED00BD4D39 /* Configuration.m */; };
-		027F3F1D1705B807001678BA /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283F816D7BCED00BD4D39 /* Controller.m */; };
-		027F3F1E1705B807001678BA /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283FA16D7BCED00BD4D39 /* Filter.m */; };
-		027F3F1F1705B807001678BA /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283FC16D7BCED00BD4D39 /* Message.m */; };
-		027F3F201705B807001678BA /* UIAlertViewCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283FE16D7BCED00BD4D39 /* UIAlertViewCustom.m */; };
-		027F3F211705B807001678BA /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02284CB81701BB12003835FA /* MessageView.m */; };
-		027F3F221705B807001678BA /* UpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2840016D7BCED00BD4D39 /* UpdateCheck.m */; };
-		027F3F231705B807001678BA /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2840416D7BCED00BD4D39 /* UpdaterController.m */; };
-		027F3F241705B807001678BA /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2840716D7BCED00BD4D39 /* UpdateServerIntegration.m */; };
-		027F3F271705B9A7001678BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290A7EF16CE36110078B288 /* UIKit.framework */; };
-		0290A7F016CE36110078B288 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290A7EF16CE36110078B288 /* UIKit.framework */; };
-		02F2840816D7BCED00BD4D39 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283F616D7BCED00BD4D39 /* Configuration.m */; };
-		02F2840916D7BCED00BD4D39 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283F816D7BCED00BD4D39 /* Controller.m */; };
-		02F2840A16D7BCED00BD4D39 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283FA16D7BCED00BD4D39 /* Filter.m */; };
-		02F2840B16D7BCED00BD4D39 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283FC16D7BCED00BD4D39 /* Message.m */; };
-		02F2840C16D7BCED00BD4D39 /* UIAlertViewCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F283FE16D7BCED00BD4D39 /* UIAlertViewCustom.m */; };
-		02F2840D16D7BCED00BD4D39 /* UpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2840016D7BCED00BD4D39 /* UpdateCheck.m */; };
-		02F2840E16D7BCED00BD4D39 /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2840416D7BCED00BD4D39 /* UpdaterController.m */; };
-		02F2840F16D7BCED00BD4D39 /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2840716D7BCED00BD4D39 /* UpdateServerIntegration.m */; };
-		02F2841916DBAFB500BD4D39 /* TestFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841416DBAFB500BD4D39 /* TestFilter.m */; };
-		02F2841A16DBAFB500BD4D39 /* TestUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841616DBAFB500BD4D39 /* TestUpdateCheck.m */; };
-		02F2841B16DBAFB500BD4D39 /* TestUpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */; };
-		9878A2BF18B8F0D00080D00F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */; };
-		98F3BCFE18AC341B00138A0A /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFB18AC341B00138A0A /* FLImageView.m */; };
-		98F3BCFF18AC341B00138A0A /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BCFD18AC341B00138A0A /* FullyLoaded.m */; };
-		BE0C3BCE1796A0BC00DE5714 /* UpdaterController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840316D7BCED00BD4D39 /* UpdaterController.h */; };
-		BE0C3BCF1796A0BC00DE5714 /* UpdaterControllerDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840516D7BCED00BD4D39 /* UpdaterControllerDelegate.h */; };
-		BEACBD0C1796C52D00769970 /* UpdateCheckDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02F2840116D7BCED00BD4D39 /* UpdateCheckDelegate.h */; };
-		BEACBD0D1796C53A00769970 /* MessageViewDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02DBC2EB1702DDE300BDEAB3 /* MessageViewDelegate.h */; };
-		BEACBD0E1796C54A00769970 /* MessageView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02284CB71701BB12003835FA /* MessageView.h */; };
+		98D0572819FD16BB009BECED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572719FD16BB009BECED /* main.m */; };
+		98D0572B19FD16BB009BECED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572A19FD16BB009BECED /* AppDelegate.m */; };
+		98D0572E19FD16BB009BECED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572D19FD16BB009BECED /* ViewController.m */; };
+		98D0573119FD16BB009BECED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D0572F19FD16BB009BECED /* Main.storyboard */; };
+		98D0573319FD16BB009BECED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D0573219FD16BB009BECED /* Images.xcassets */; };
+		98D0573619FD16BB009BECED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D0573419FD16BB009BECED /* LaunchScreen.xib */; };
+		98D0574219FD16BB009BECED /* TurkcellUpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574119FD16BB009BECED /* TurkcellUpdaterTests.m */; };
+		98D0576919FD16FA009BECED /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574D19FD16FA009BECED /* Configuration.m */; };
+		98D0576A19FD16FA009BECED /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574F19FD16FA009BECED /* Controller.m */; };
+		98D0576B19FD16FA009BECED /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */; };
+		98D0576C19FD16FA009BECED /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575319FD16FA009BECED /* Filter.m */; };
+		98D0576D19FD16FA009BECED /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575519FD16FA009BECED /* FLImageView.m */; };
+		98D0576E19FD16FA009BECED /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575719FD16FA009BECED /* FullyLoaded.m */; };
+		98D0576F19FD16FA009BECED /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575919FD16FA009BECED /* Message.m */; };
+		98D0577019FD16FA009BECED /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575B19FD16FA009BECED /* MessageView.m */; };
+		98D0577119FD16FA009BECED /* UIAlertViewCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */; };
+		98D0577219FD16FA009BECED /* UpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576119FD16FA009BECED /* UpdateCheck.m */; };
+		98D0577319FD16FA009BECED /* updater_strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98D0576319FD16FA009BECED /* updater_strings.plist */; };
+		98D0577419FD16FA009BECED /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576519FD16FA009BECED /* UpdaterController.m */; };
+		98D0577519FD16FA009BECED /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576819FD16FA009BECED /* UpdateServerIntegration.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		023F151C16B1338700496854 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-				BEACBD0E1796C54A00769970 /* MessageView.h in CopyFiles */,
-				BEACBD0D1796C53A00769970 /* MessageViewDelegate.h in CopyFiles */,
-				BEACBD0C1796C52D00769970 /* UpdateCheckDelegate.h in CopyFiles */,
-				BE0C3BCE1796A0BC00DE5714 /* UpdaterController.h in CopyFiles */,
-				BE0C3BCF1796A0BC00DE5714 /* UpdaterControllerDelegate.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		98D0573C19FD16BB009BECED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98D0571A19FD16BB009BECED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98D0572119FD16BB009BECED;
+			remoteInfo = TurkcellUpdater;
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02284CB71701BB12003835FA /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
-		02284CB81701BB12003835FA /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
-		023F151E16B1338700496854 /* libTurkcellUpdater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTurkcellUpdater.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		023F152116B1338700496854 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		023F152516B1338700496854 /* TurkcellUpdater-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TurkcellUpdater-Prefix.pch"; sourceTree = "<group>"; };
-		023F152F16B1338800496854 /* TurkcellUpdaterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurkcellUpdaterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		023F153016B1338800496854 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		023F153A16B1338800496854 /* TurkcellUpdaterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TurkcellUpdaterTests-Info.plist"; sourceTree = "<group>"; };
-		023F153C16B1338800496854 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0290A7EF16CE36110078B288 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		02DBC2EB1702DDE300BDEAB3 /* MessageViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewDelegate.h; sourceTree = "<group>"; };
-		02E5F5AF16EDDC5E00A40B3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		02F283F516D7BCED00BD4D39 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
-		02F283F616D7BCED00BD4D39 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
-		02F283F716D7BCED00BD4D39 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
-		02F283F816D7BCED00BD4D39 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
-		02F283F916D7BCED00BD4D39 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
-		02F283FA16D7BCED00BD4D39 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
-		02F283FB16D7BCED00BD4D39 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		02F283FC16D7BCED00BD4D39 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		02F283FD16D7BCED00BD4D39 /* UIAlertViewCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewCustom.h; sourceTree = "<group>"; };
-		02F283FE16D7BCED00BD4D39 /* UIAlertViewCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewCustom.m; sourceTree = "<group>"; };
-		02F283FF16D7BCED00BD4D39 /* UpdateCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheck.h; sourceTree = "<group>"; };
-		02F2840016D7BCED00BD4D39 /* UpdateCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCheck.m; sourceTree = "<group>"; };
-		02F2840116D7BCED00BD4D39 /* UpdateCheckDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheckDelegate.h; sourceTree = "<group>"; };
-		02F2840216D7BCED00BD4D39 /* updater_strings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = updater_strings.plist; sourceTree = "<group>"; };
-		02F2840316D7BCED00BD4D39 /* UpdaterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterController.h; sourceTree = "<group>"; };
-		02F2840416D7BCED00BD4D39 /* UpdaterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdaterController.m; sourceTree = "<group>"; };
-		02F2840516D7BCED00BD4D39 /* UpdaterControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterControllerDelegate.h; sourceTree = "<group>"; };
-		02F2840616D7BCED00BD4D39 /* UpdateServerIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateServerIntegration.h; sourceTree = "<group>"; };
-		02F2840716D7BCED00BD4D39 /* UpdateServerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateServerIntegration.m; sourceTree = "<group>"; };
-		02F2841316DBAFB500BD4D39 /* TestFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFilter.h; sourceTree = "<group>"; };
-		02F2841416DBAFB500BD4D39 /* TestFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFilter.m; sourceTree = "<group>"; };
-		02F2841516DBAFB500BD4D39 /* TestUpdateCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUpdateCheck.h; sourceTree = "<group>"; };
-		02F2841616DBAFB500BD4D39 /* TestUpdateCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUpdateCheck.m; sourceTree = "<group>"; };
-		02F2841716DBAFB500BD4D39 /* TestUpdateServerIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUpdateServerIntegration.h; sourceTree = "<group>"; };
-		02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUpdateServerIntegration.m; sourceTree = "<group>"; };
-		9878A2BD18B8F0D00080D00F /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
-		9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
-		98B77E7718851CEE004B7362 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = SOURCE_ROOT; };
-		98F3BCFA18AC341B00138A0A /* FLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLImageView.h; sourceTree = "<group>"; };
-		98F3BCFB18AC341B00138A0A /* FLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLImageView.m; sourceTree = "<group>"; };
-		98F3BCFC18AC341B00138A0A /* FullyLoaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullyLoaded.h; sourceTree = "<group>"; };
-		98F3BCFD18AC341B00138A0A /* FullyLoaded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullyLoaded.m; sourceTree = "<group>"; };
+		98D0572219FD16BB009BECED /* TurkcellUpdater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkcellUpdater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98D0572619FD16BB009BECED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98D0572719FD16BB009BECED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		98D0572919FD16BB009BECED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		98D0572A19FD16BB009BECED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		98D0572C19FD16BB009BECED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		98D0572D19FD16BB009BECED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		98D0573019FD16BB009BECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98D0573219FD16BB009BECED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		98D0573519FD16BB009BECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		98D0573B19FD16BB009BECED /* TurkcellUpdaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurkcellUpdaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98D0574019FD16BB009BECED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98D0574119FD16BB009BECED /* TurkcellUpdaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TurkcellUpdaterTests.m; sourceTree = "<group>"; };
+		98D0574C19FD16FA009BECED /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		98D0574D19FD16FA009BECED /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		98D0574E19FD16FA009BECED /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		98D0574F19FD16FA009BECED /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		98D0575019FD16FA009BECED /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		98D0575219FD16FA009BECED /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		98D0575319FD16FA009BECED /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
+		98D0575419FD16FA009BECED /* FLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLImageView.h; sourceTree = "<group>"; };
+		98D0575519FD16FA009BECED /* FLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLImageView.m; sourceTree = "<group>"; };
+		98D0575619FD16FA009BECED /* FullyLoaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullyLoaded.h; sourceTree = "<group>"; };
+		98D0575719FD16FA009BECED /* FullyLoaded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullyLoaded.m; sourceTree = "<group>"; };
+		98D0575819FD16FA009BECED /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		98D0575919FD16FA009BECED /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		98D0575A19FD16FA009BECED /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
+		98D0575B19FD16FA009BECED /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		98D0575C19FD16FA009BECED /* MessageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewDelegate.h; sourceTree = "<group>"; };
+		98D0575E19FD16FA009BECED /* UIAlertViewCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewCustom.h; sourceTree = "<group>"; };
+		98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewCustom.m; sourceTree = "<group>"; };
+		98D0576019FD16FA009BECED /* UpdateCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheck.h; sourceTree = "<group>"; };
+		98D0576119FD16FA009BECED /* UpdateCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCheck.m; sourceTree = "<group>"; };
+		98D0576219FD16FA009BECED /* UpdateCheckDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheckDelegate.h; sourceTree = "<group>"; };
+		98D0576319FD16FA009BECED /* updater_strings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = updater_strings.plist; sourceTree = "<group>"; };
+		98D0576419FD16FA009BECED /* UpdaterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterController.h; sourceTree = "<group>"; };
+		98D0576519FD16FA009BECED /* UpdaterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdaterController.m; sourceTree = "<group>"; };
+		98D0576619FD16FA009BECED /* UpdaterControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterControllerDelegate.h; sourceTree = "<group>"; };
+		98D0576719FD16FA009BECED /* UpdateServerIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateServerIntegration.h; sourceTree = "<group>"; };
+		98D0576819FD16FA009BECED /* UpdateServerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateServerIntegration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		023F151B16B1338700496854 /* Frameworks */ = {
+		98D0571F19FD16BB009BECED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0290A7F016CE36110078B288 /* UIKit.framework in Frameworks */,
-				023F152216B1338700496854 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		023F152B16B1338800496854 /* Frameworks */ = {
+		98D0573819FD16BB009BECED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				027F3F271705B9A7001678BA /* UIKit.framework in Frameworks */,
-				023F153116B1338800496854 /* SenTestingKit.framework in Frameworks */,
-				023F153416B1338800496854 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		023F151516B1338700496854 = {
+		98D0571919FD16BB009BECED = {
 			isa = PBXGroup;
 			children = (
-				023F152316B1338700496854 /* TurkcellUpdater */,
-				023F153816B1338800496854 /* TurkcellUpdaterTests */,
-				023F152016B1338700496854 /* Frameworks */,
-				023F151F16B1338700496854 /* Products */,
+				98D0572419FD16BB009BECED /* TurkcellUpdater */,
+				98D0573E19FD16BB009BECED /* TurkcellUpdaterTests */,
+				98D0572319FD16BB009BECED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		023F151F16B1338700496854 /* Products */ = {
+		98D0572319FD16BB009BECED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				023F151E16B1338700496854 /* libTurkcellUpdater.a */,
-				023F152F16B1338800496854 /* TurkcellUpdaterTests.octest */,
+				98D0572219FD16BB009BECED /* TurkcellUpdater.app */,
+				98D0573B19FD16BB009BECED /* TurkcellUpdaterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		023F152016B1338700496854 /* Frameworks */ = {
+		98D0572419FD16BB009BECED /* TurkcellUpdater */ = {
 			isa = PBXGroup;
 			children = (
-				0290A7EF16CE36110078B288 /* UIKit.framework */,
-				023F152116B1338700496854 /* Foundation.framework */,
-				023F153016B1338800496854 /* SenTestingKit.framework */,
-				02E5F5AF16EDDC5E00A40B3B /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		023F152316B1338700496854 /* TurkcellUpdater */ = {
-			isa = PBXGroup;
-			children = (
-				98F3BCFA18AC341B00138A0A /* FLImageView.h */,
-				98F3BCFB18AC341B00138A0A /* FLImageView.m */,
-				98F3BCFC18AC341B00138A0A /* FullyLoaded.h */,
-				98F3BCFD18AC341B00138A0A /* FullyLoaded.m */,
-				9878A2BD18B8F0D00080D00F /* CustomIOS7AlertView.h */,
-				9878A2BE18B8F0D00080D00F /* CustomIOS7AlertView.m */,
-				98B77E7718851CEE004B7362 /* version.h */,
-				02F283F516D7BCED00BD4D39 /* Configuration.h */,
-				02F283F616D7BCED00BD4D39 /* Configuration.m */,
-				02F283F716D7BCED00BD4D39 /* Controller.h */,
-				02F283F816D7BCED00BD4D39 /* Controller.m */,
-				02F283F916D7BCED00BD4D39 /* Filter.h */,
-				02F283FA16D7BCED00BD4D39 /* Filter.m */,
-				02F283FB16D7BCED00BD4D39 /* Message.h */,
-				02F283FC16D7BCED00BD4D39 /* Message.m */,
-				02F283FD16D7BCED00BD4D39 /* UIAlertViewCustom.h */,
-				02F283FE16D7BCED00BD4D39 /* UIAlertViewCustom.m */,
-				02284CB71701BB12003835FA /* MessageView.h */,
-				02284CB81701BB12003835FA /* MessageView.m */,
-				02DBC2EB1702DDE300BDEAB3 /* MessageViewDelegate.h */,
-				02F283FF16D7BCED00BD4D39 /* UpdateCheck.h */,
-				02F2840016D7BCED00BD4D39 /* UpdateCheck.m */,
-				02F2840116D7BCED00BD4D39 /* UpdateCheckDelegate.h */,
-				02F2840216D7BCED00BD4D39 /* updater_strings.plist */,
-				02F2840316D7BCED00BD4D39 /* UpdaterController.h */,
-				02F2840416D7BCED00BD4D39 /* UpdaterController.m */,
-				02F2840516D7BCED00BD4D39 /* UpdaterControllerDelegate.h */,
-				02F2840616D7BCED00BD4D39 /* UpdateServerIntegration.h */,
-				02F2840716D7BCED00BD4D39 /* UpdateServerIntegration.m */,
-				023F152416B1338700496854 /* Supporting Files */,
+				98D0574B19FD16FA009BECED /* TurkcellUpdaterDSK */,
+				98D0572919FD16BB009BECED /* AppDelegate.h */,
+				98D0572A19FD16BB009BECED /* AppDelegate.m */,
+				98D0572C19FD16BB009BECED /* ViewController.h */,
+				98D0572D19FD16BB009BECED /* ViewController.m */,
+				98D0572F19FD16BB009BECED /* Main.storyboard */,
+				98D0573219FD16BB009BECED /* Images.xcassets */,
+				98D0573419FD16BB009BECED /* LaunchScreen.xib */,
+				98D0572519FD16BB009BECED /* Supporting Files */,
 			);
 			path = TurkcellUpdater;
 			sourceTree = "<group>";
 		};
-		023F152416B1338700496854 /* Supporting Files */ = {
+		98D0572519FD16BB009BECED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				023F152516B1338700496854 /* TurkcellUpdater-Prefix.pch */,
+				98D0572619FD16BB009BECED /* Info.plist */,
+				98D0572719FD16BB009BECED /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		023F153816B1338800496854 /* TurkcellUpdaterTests */ = {
+		98D0573E19FD16BB009BECED /* TurkcellUpdaterTests */ = {
 			isa = PBXGroup;
 			children = (
-				02F2841316DBAFB500BD4D39 /* TestFilter.h */,
-				02F2841416DBAFB500BD4D39 /* TestFilter.m */,
-				02F2841516DBAFB500BD4D39 /* TestUpdateCheck.h */,
-				02F2841616DBAFB500BD4D39 /* TestUpdateCheck.m */,
-				02F2841716DBAFB500BD4D39 /* TestUpdateServerIntegration.h */,
-				02F2841816DBAFB500BD4D39 /* TestUpdateServerIntegration.m */,
-				023F153916B1338800496854 /* Supporting Files */,
+				98D0574119FD16BB009BECED /* TurkcellUpdaterTests.m */,
+				98D0573F19FD16BB009BECED /* Supporting Files */,
 			);
 			path = TurkcellUpdaterTests;
 			sourceTree = "<group>";
 		};
-		023F153916B1338800496854 /* Supporting Files */ = {
+		98D0573F19FD16BB009BECED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				023F153A16B1338800496854 /* TurkcellUpdaterTests-Info.plist */,
-				023F153B16B1338800496854 /* InfoPlist.strings */,
+				98D0574019FD16BB009BECED /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98D0574B19FD16FA009BECED /* TurkcellUpdaterDSK */ = {
+			isa = PBXGroup;
+			children = (
+				98D0574C19FD16FA009BECED /* Configuration.h */,
+				98D0574D19FD16FA009BECED /* Configuration.m */,
+				98D0574E19FD16FA009BECED /* Controller.h */,
+				98D0574F19FD16FA009BECED /* Controller.m */,
+				98D0575019FD16FA009BECED /* CustomIOS7AlertView.h */,
+				98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */,
+				98D0575219FD16FA009BECED /* Filter.h */,
+				98D0575319FD16FA009BECED /* Filter.m */,
+				98D0575419FD16FA009BECED /* FLImageView.h */,
+				98D0575519FD16FA009BECED /* FLImageView.m */,
+				98D0575619FD16FA009BECED /* FullyLoaded.h */,
+				98D0575719FD16FA009BECED /* FullyLoaded.m */,
+				98D0575819FD16FA009BECED /* Message.h */,
+				98D0575919FD16FA009BECED /* Message.m */,
+				98D0575A19FD16FA009BECED /* MessageView.h */,
+				98D0575B19FD16FA009BECED /* MessageView.m */,
+				98D0575C19FD16FA009BECED /* MessageViewDelegate.h */,
+				98D0575E19FD16FA009BECED /* UIAlertViewCustom.h */,
+				98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */,
+				98D0576019FD16FA009BECED /* UpdateCheck.h */,
+				98D0576119FD16FA009BECED /* UpdateCheck.m */,
+				98D0576219FD16FA009BECED /* UpdateCheckDelegate.h */,
+				98D0576319FD16FA009BECED /* updater_strings.plist */,
+				98D0576419FD16FA009BECED /* UpdaterController.h */,
+				98D0576519FD16FA009BECED /* UpdaterController.m */,
+				98D0576619FD16FA009BECED /* UpdaterControllerDelegate.h */,
+				98D0576719FD16FA009BECED /* UpdateServerIntegration.h */,
+				98D0576819FD16FA009BECED /* UpdateServerIntegration.m */,
+			);
+			path = TurkcellUpdaterDSK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		023F151D16B1338700496854 /* TurkcellUpdater */ = {
+		98D0572119FD16BB009BECED /* TurkcellUpdater */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 023F154316B1338800496854 /* Build configuration list for PBXNativeTarget "TurkcellUpdater" */;
+			buildConfigurationList = 98D0574519FD16BB009BECED /* Build configuration list for PBXNativeTarget "TurkcellUpdater" */;
 			buildPhases = (
-				023F151A16B1338700496854 /* Sources */,
-				023F151B16B1338700496854 /* Frameworks */,
-				023F151C16B1338700496854 /* CopyFiles */,
+				98D0571E19FD16BB009BECED /* Sources */,
+				98D0571F19FD16BB009BECED /* Frameworks */,
+				98D0572019FD16BB009BECED /* Resources */,
 			);
 			buildRules = (
 			);
@@ -261,177 +213,166 @@
 			);
 			name = TurkcellUpdater;
 			productName = TurkcellUpdater;
-			productReference = 023F151E16B1338700496854 /* libTurkcellUpdater.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 98D0572219FD16BB009BECED /* TurkcellUpdater.app */;
+			productType = "com.apple.product-type.application";
 		};
-		023F152E16B1338800496854 /* TurkcellUpdaterTests */ = {
+		98D0573A19FD16BB009BECED /* TurkcellUpdaterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 023F154616B1338800496854 /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTests" */;
+			buildConfigurationList = 98D0574819FD16BB009BECED /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTests" */;
 			buildPhases = (
-				023F152A16B1338800496854 /* Sources */,
-				023F152B16B1338800496854 /* Frameworks */,
-				023F152C16B1338800496854 /* Resources */,
-				023F152D16B1338800496854 /* ShellScript */,
+				98D0573719FD16BB009BECED /* Sources */,
+				98D0573819FD16BB009BECED /* Frameworks */,
+				98D0573919FD16BB009BECED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				98D0573D19FD16BB009BECED /* PBXTargetDependency */,
 			);
 			name = TurkcellUpdaterTests;
 			productName = TurkcellUpdaterTests;
-			productReference = 023F152F16B1338800496854 /* TurkcellUpdaterTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = 98D0573B19FD16BB009BECED /* TurkcellUpdaterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		023F151616B1338700496854 /* Project object */ = {
+		98D0571A19FD16BB009BECED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Sonat Karakas";
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Abdulbasıt Tanhan";
+				TargetAttributes = {
+					98D0572119FD16BB009BECED = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					98D0573A19FD16BB009BECED = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 98D0572119FD16BB009BECED;
+					};
+				};
 			};
-			buildConfigurationList = 023F151916B1338700496854 /* Build configuration list for PBXProject "TurkcellUpdater" */;
+			buildConfigurationList = 98D0571D19FD16BB009BECED /* Build configuration list for PBXProject "TurkcellUpdater" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 023F151516B1338700496854;
-			productRefGroup = 023F151F16B1338700496854 /* Products */;
+			mainGroup = 98D0571919FD16BB009BECED;
+			productRefGroup = 98D0572319FD16BB009BECED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				023F151D16B1338700496854 /* TurkcellUpdater */,
-				023F152E16B1338800496854 /* TurkcellUpdaterTests */,
-				BEBB4AFD179561CA006FFC08 /* TurkcellUpdaterFramework */,
+				98D0572119FD16BB009BECED /* TurkcellUpdater */,
+				98D0573A19FD16BB009BECED /* TurkcellUpdaterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		023F152C16B1338800496854 /* Resources */ = {
+		98D0572019FD16BB009BECED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				023F153D16B1338800496854 /* InfoPlist.strings in Resources */,
+				98D0573119FD16BB009BECED /* Main.storyboard in Resources */,
+				98D0577319FD16FA009BECED /* updater_strings.plist in Resources */,
+				98D0573619FD16BB009BECED /* LaunchScreen.xib in Resources */,
+				98D0573319FD16BB009BECED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98D0573919FD16BB009BECED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		023F152D16B1338800496854 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		BE1E97851796955F005BE4FB /* Build Universal Framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Build Universal Framework";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nSIMULATOR_LIBRARY_INCLUDE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/include/${PRODUCT_NAME}\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nBUNDLE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}Bundle.bundle\" &&\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo -create \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\ncp \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}/Versions/A\" &&\nln -s \"A\" \"${FRAMEWORK}/Versions/Current\" &&\nln -s \"Versions/Current/Headers\" \"${FRAMEWORK}/Headers\" &&\nln -s \"Versions/Current/Resources\" \"${FRAMEWORK}/Resources\" &&\nln -s \"Versions/Current/${PRODUCT_NAME}\" \"${FRAMEWORK}/${PRODUCT_NAME}\" &&\n\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/UpdaterController.h\" \"${FRAMEWORK}/Headers/\" &&\ncp \"${SIMULATOR_LIBRARY_INCLUDE_PATH}/UpdaterControllerDelegate.h\" \"${FRAMEWORK}/Headers/\"\n\n#&&\n\n#cp -r \"${BUNDLE_LIBRARY_PATH}\" \"${FRAMEWORK}/Resources/\"";
-		};
-		BEBB4B021795622E006FFC08 /* Build Static Libs */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Build Static Libs";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "xcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphonesimulator -target ${PROJECT_NAME} -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator\n\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphoneos -target ${PROJECT_NAME} -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos\n\n#xcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphoneos -target ${PROJECT_NAME}Bundle -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		023F151A16B1338700496854 /* Sources */ = {
+		98D0571E19FD16BB009BECED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9878A2BF18B8F0D00080D00F /* CustomIOS7AlertView.m in Sources */,
-				02F2840816D7BCED00BD4D39 /* Configuration.m in Sources */,
-				98F3BCFF18AC341B00138A0A /* FullyLoaded.m in Sources */,
-				02F2840916D7BCED00BD4D39 /* Controller.m in Sources */,
-				02F2840A16D7BCED00BD4D39 /* Filter.m in Sources */,
-				02F2840B16D7BCED00BD4D39 /* Message.m in Sources */,
-				02F2840C16D7BCED00BD4D39 /* UIAlertViewCustom.m in Sources */,
-				02F2840D16D7BCED00BD4D39 /* UpdateCheck.m in Sources */,
-				02F2840E16D7BCED00BD4D39 /* UpdaterController.m in Sources */,
-				02F2840F16D7BCED00BD4D39 /* UpdateServerIntegration.m in Sources */,
-				98F3BCFE18AC341B00138A0A /* FLImageView.m in Sources */,
-				02284CB91701BB12003835FA /* MessageView.m in Sources */,
+				98D0576D19FD16FA009BECED /* FLImageView.m in Sources */,
+				98D0576B19FD16FA009BECED /* CustomIOS7AlertView.m in Sources */,
+				98D0576C19FD16FA009BECED /* Filter.m in Sources */,
+				98D0572E19FD16BB009BECED /* ViewController.m in Sources */,
+				98D0576A19FD16FA009BECED /* Controller.m in Sources */,
+				98D0572B19FD16BB009BECED /* AppDelegate.m in Sources */,
+				98D0577119FD16FA009BECED /* UIAlertViewCustom.m in Sources */,
+				98D0577519FD16FA009BECED /* UpdateServerIntegration.m in Sources */,
+				98D0577419FD16FA009BECED /* UpdaterController.m in Sources */,
+				98D0576919FD16FA009BECED /* Configuration.m in Sources */,
+				98D0576F19FD16FA009BECED /* Message.m in Sources */,
+				98D0577219FD16FA009BECED /* UpdateCheck.m in Sources */,
+				98D0576E19FD16FA009BECED /* FullyLoaded.m in Sources */,
+				98D0577019FD16FA009BECED /* MessageView.m in Sources */,
+				98D0572819FD16BB009BECED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		023F152A16B1338800496854 /* Sources */ = {
+		98D0573719FD16BB009BECED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				027F3F1C1705B807001678BA /* Configuration.m in Sources */,
-				027F3F1D1705B807001678BA /* Controller.m in Sources */,
-				027F3F1E1705B807001678BA /* Filter.m in Sources */,
-				027F3F1F1705B807001678BA /* Message.m in Sources */,
-				027F3F201705B807001678BA /* UIAlertViewCustom.m in Sources */,
-				027F3F211705B807001678BA /* MessageView.m in Sources */,
-				027F3F221705B807001678BA /* UpdateCheck.m in Sources */,
-				027F3F231705B807001678BA /* UpdaterController.m in Sources */,
-				027F3F241705B807001678BA /* UpdateServerIntegration.m in Sources */,
-				02F2841916DBAFB500BD4D39 /* TestFilter.m in Sources */,
-				02F2841A16DBAFB500BD4D39 /* TestUpdateCheck.m in Sources */,
-				02F2841B16DBAFB500BD4D39 /* TestUpdateServerIntegration.m in Sources */,
+				98D0574219FD16BB009BECED /* TurkcellUpdaterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		98D0573D19FD16BB009BECED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98D0572119FD16BB009BECED /* TurkcellUpdater */;
+			targetProxy = 98D0573C19FD16BB009BECED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		023F153B16B1338800496854 /* InfoPlist.strings */ = {
+		98D0572F19FD16BB009BECED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				023F153C16B1338800496854 /* en */,
+				98D0573019FD16BB009BECED /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		98D0573419FD16BB009BECED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98D0573519FD16BB009BECED /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		023F154116B1338800496854 /* Debug */ = {
+		98D0574319FD16BB009BECED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -440,166 +381,139 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		023F154216B1338800496854 /* Release */ = {
+		98D0574419FD16BB009BECED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		023F154416B1338800496854 /* Debug */ = {
+		98D0574619FD16BB009BECED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/TurkcellUpdater.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TurkcellUpdater/TurkcellUpdater-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TurkcellUpdater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Debug;
 		};
-		023F154516B1338800496854 /* Release */ = {
+		98D0574719FD16BB009BECED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/TurkcellUpdater.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TurkcellUpdater/TurkcellUpdater-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TurkcellUpdater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Release;
 		};
-		023F154716B1338800496854 /* Debug */ = {
+		98D0574919FD16BB009BECED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TurkcellUpdater/TurkcellUpdater-Prefix.pch";
-				INFOPLIST_FILE = "TurkcellUpdaterTests/TurkcellUpdaterTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				ONLY_ACTIVE_ARCH = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TurkcellUpdaterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "i386 armv7 armv7s";
-				WRAPPER_EXTENSION = octest;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkcellUpdater.app/TurkcellUpdater";
 			};
 			name = Debug;
 		};
-		023F154816B1338800496854 /* Release */ = {
+		98D0574A19FD16BB009BECED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TurkcellUpdater/TurkcellUpdater-Prefix.pch";
-				INFOPLIST_FILE = "TurkcellUpdaterTests/TurkcellUpdaterTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				INFOPLIST_FILE = TurkcellUpdaterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "i386 armv7 armv7s";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-		BEBB4AFE179561CA006FFC08 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Baris Guzelordu (Z3268TBF9H)";
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = TurkcellUpdater;
-				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
-			};
-			name = Debug;
-		};
-		BEBB4AFF179561CA006FFC08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Turkcell Iletisim Hizmetleri A. S.";
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = TurkcellUpdater;
-				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkcellUpdater.app/TurkcellUpdater";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		023F151916B1338700496854 /* Build configuration list for PBXProject "TurkcellUpdater" */ = {
+		98D0571D19FD16BB009BECED /* Build configuration list for PBXProject "TurkcellUpdater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				023F154116B1338800496854 /* Debug */,
-				023F154216B1338800496854 /* Release */,
+				98D0574319FD16BB009BECED /* Debug */,
+				98D0574419FD16BB009BECED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		023F154316B1338800496854 /* Build configuration list for PBXNativeTarget "TurkcellUpdater" */ = {
+		98D0574519FD16BB009BECED /* Build configuration list for PBXNativeTarget "TurkcellUpdater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				023F154416B1338800496854 /* Debug */,
-				023F154516B1338800496854 /* Release */,
+				98D0574619FD16BB009BECED /* Debug */,
+				98D0574719FD16BB009BECED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		023F154616B1338800496854 /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTests" */ = {
+		98D0574819FD16BB009BECED /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				023F154716B1338800496854 /* Debug */,
-				023F154816B1338800496854 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BEBB4B00179561CA006FFC08 /* Build configuration list for PBXAggregateTarget "TurkcellUpdaterFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEBB4AFE179561CA006FFC08 /* Debug */,
-				BEBB4AFF179561CA006FFC08 /* Release */,
+				98D0574919FD16BB009BECED /* Debug */,
+				98D0574A19FD16BB009BECED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 023F151616B1338700496854 /* Project object */;
+	rootObject = 98D0571A19FD16BB009BECED /* Project object */;
 }
