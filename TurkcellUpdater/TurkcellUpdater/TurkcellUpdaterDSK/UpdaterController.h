@@ -29,7 +29,7 @@
 @interface UpdaterController : UIView <UIAlertViewDelegate>
 
 @property (nonatomic, retain) NSString *updateServerURL;
-@property (nonatomic, retain) id<UpdaterControllerDelegate> updaterControllerDelegate;
+@property (nonatomic, assign) id<UpdaterControllerDelegate> updaterControllerDelegate;
 @property (nonatomic, assign) BOOL postProperties;
 
 + (UpdaterController *) initWithUpdateURL:(NSString *)URL

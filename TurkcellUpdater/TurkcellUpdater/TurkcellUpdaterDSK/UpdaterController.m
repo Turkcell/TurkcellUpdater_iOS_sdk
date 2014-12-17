@@ -176,8 +176,8 @@
     [alertView setDelegate:self];
     
     // You may use a Block, rather than a delegate.
-    [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
-        NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
+    [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, NSInteger buttonIndex) {
+        //NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
         [alertView close];
     }];
     
@@ -233,7 +233,7 @@
 
 - (void)customIOS7dialogButtonTouchUpInside: (CustomIOS7AlertView *)alertView clickedButtonAtIndex: (NSInteger)buttonIndex
 {
-    NSLog(@"Delegate: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
+    //NSLog(@"Delegate: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
     
     if (buttonIndex == 0)
         [self viewButtonClicked];
