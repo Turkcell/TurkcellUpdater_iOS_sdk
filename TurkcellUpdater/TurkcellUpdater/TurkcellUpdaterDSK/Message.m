@@ -52,24 +52,18 @@
  *  @return localised string
  */
 -(NSString *)getLocalisedStringForKey:(NSString *)key preferredLanguage:(NSString *)preferredLanguage{
-    NSString *systemLocale = [[NSLocale preferredLanguages] objectAtIndex:0];
+
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:[NSString stringWithFormat:@"%@.lproj",preferredLanguage]];
     
-    static NSBundle *languageBundle = nil;
-    
-    if (preferredLanguage) {
-        if (![[[NSBundle mainBundle] localizations] containsObject:preferredLanguage]) {
-            if (![[[NSBundle mainBundle] localizations] containsObject:systemLocale]) {
-                NSLog(@"Preferred language is not avaible.");
-                systemLocale = @"tr";
-            }
-        }else {
-            systemLocale = preferredLanguage;
+    if (filePath){
+        NSDictionary *dictionary = [[NSDictionary alloc ] initWithContentsOfFile:filePath];
+        NSString *localizedString = [dictionary objectForKey:key];
+        if (localizedString) {
+            return  localizedString;
         }
     }
     
-    languageBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:systemLocale ofType:@"lproj"]];
-    NSString *localizedString = [languageBundle localizedStringForKey:key value:@"" table:nil];
-    return localizedString;
+    return NSLocalizedString(key, nil);
 }
 
 @end
