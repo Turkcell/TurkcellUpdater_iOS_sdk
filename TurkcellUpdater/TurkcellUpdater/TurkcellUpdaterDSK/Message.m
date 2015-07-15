@@ -60,7 +60,7 @@
         if (![[[NSBundle mainBundle] localizations] containsObject:preferredLanguage]) {
             if (![[[NSBundle mainBundle] localizations] containsObject:systemLocale]) {
                 NSLog(@"Preferred language is not avaible.");
-                systemLocale = @"en";
+                systemLocale = @"tr";
             }
         }else {
             systemLocale = preferredLanguage;
