@@ -1,19 +1,19 @@
 /*******************************************************************************
  *
  *  Copyright (C) 2014 Turkcell
- *  
+ *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at
- *  
+ *
  *       http://www.apache.org/licenses/LICENSE-2.0
- *  
+ *
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS,
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *  
+ *
  *******************************************************************************/
 //
 //  MesssageView.m
@@ -50,9 +50,9 @@
 @synthesize targetWebsiteUrl,view,delegate;
 
 + (MessageView *) initWithTitle:(NSString *)title
-                         message:(NSString *)message
-                        imageUrl:(NSString *)imageUrl
-                targetWebsiteUrl:(NSString *)targetWebsiteUrl
+                        message:(NSString *)message
+                       imageUrl:(NSString *)imageUrl
+               targetWebsiteUrl:(NSString *)targetWebsiteUrl
                        delegate:(id<MessageViewDelegate>)delegate{
     
     MessageView *messageView = [[MessageView alloc] init];
@@ -93,10 +93,10 @@
     
     if ([imageUrl length] > 0) {
         
-
+        
         FLImageView *imageView = [[FLImageView alloc] initWithFrame:CGRectMake(10, imageViewY, 100, 100)];
         [imageView loadImageAtURLString:imageUrl placeholderImage:[UIImage imageWithColor:[UIColor lightGrayColor]]];
-
+        
         [[messageView view] addSubview:imageView];
         messageLabelX = 120;
         messageLabelWidth = 170;
@@ -116,7 +116,7 @@
     [messageLabel setShowsVerticalScrollIndicator:YES];
     [messageLabel setText:message];
     [[messageView view] addSubview:messageLabel];
-
+    
     UIView *buttonBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, viewHeight - 40, 300, 40)];
     [[buttonBackgroundView layer] setCornerRadius:10.0];
     [buttonBackgroundView setBackgroundColor:[UIColor lightGrayColor]];
@@ -129,7 +129,7 @@
         
         UIButton *buttonView = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonView setFrame:CGRectMake(155, viewHeight - 35, 135, 30)];
-        [buttonView setTitle:[Message getMessage:@"view"] forState:UIControlStateNormal];
+        [buttonView setTitle:[[Message sharedInstance] getMessage:@"view"] forState:UIControlStateNormal];
         [buttonView addTarget:delegate action:@selector(viewButtonClicked) forControlEvents:UIControlEventTouchUpInside];
         [[messageView view] addSubview:buttonView];
         buttonOKWidth = 135;
@@ -139,7 +139,7 @@
     
     buttonOK = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [buttonOK setFrame:CGRectMake(10, viewHeight - 35, buttonOKWidth, 30)];
-    [buttonOK setTitle:[Message getMessage:@"close"] forState:UIControlStateNormal];
+    [buttonOK setTitle:[[Message sharedInstance] getMessage:@"close"] forState:UIControlStateNormal];
     [buttonOK addTarget:delegate action:@selector(OKButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [[messageView view] addSubview:buttonOK];
     

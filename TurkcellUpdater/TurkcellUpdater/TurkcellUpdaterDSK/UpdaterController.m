@@ -1,19 +1,19 @@
 /*******************************************************************************
  *
  *  Copyright (C) 2014 Turkcell
- *  
+ *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at
- *  
+ *
  *       http://www.apache.org/licenses/LICENSE-2.0
- *  
+ *
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS,
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *  
+ *
  *******************************************************************************/
 
 //
@@ -65,7 +65,16 @@
     [updaterController setUpdateServerURL:URL];
     [updaterController setUpdaterControllerDelegate:delegate];
     [updaterController setFrame:CGRectMake(0, 0, 0, 0)];
-    
+    return updaterController;
+}
+
++ (UpdaterController *) initWithUpdateURL:(NSString *)URL
+                        preferredLanguage:(NSString *)preferredLanguage
+                                 delegate:(id<UpdaterControllerDelegate>)delegate
+                           postProperties:(BOOL)postProperties;
+{
+    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:URL delegate:delegate postProperties:postProperties];
+    [Message sharedInstance].preferredLanguage = preferredLanguage;
     return updaterController;
 }
 
@@ -73,7 +82,6 @@
     
     UpdateCheck *updateCheck = [UpdateCheck initWithUpdateServerURL:[self updateServerURL] delegate:self postProperties:self.postProperties];
     [updateCheck update];
-    
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -172,7 +180,7 @@
     [alertView setContainerView:[self createMessageViewWithDictionary:messageDictionary]];
     
     // Modify the parameters
-    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:[Message getMessage:@"install_"], [Message getMessage:@"remind_me_later"], nil]];
+    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:[[Message sharedInstance] getMessage:@"install_"], [[Message sharedInstance] getMessage:@"remind_me_later"], nil]];
     [alertView setDelegate:self];
     
     // You may use a Block, rather than a delegate.

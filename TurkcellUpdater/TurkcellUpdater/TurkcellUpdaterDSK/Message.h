@@ -27,6 +27,9 @@
 
 @interface Message : NSObject
 
-+ (NSString *) getMessage:(NSString *)messageType;
+@property (nonatomic, strong) NSString *preferredLanguage;
+
++(instancetype)sharedInstance;
+-(NSString *)getMessage:(NSString *)messageType;
 
 @end

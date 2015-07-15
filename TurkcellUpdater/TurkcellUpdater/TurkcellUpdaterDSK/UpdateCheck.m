@@ -1,19 +1,19 @@
 /*******************************************************************************
  *
  *  Copyright (C) 2014 Turkcell
- *  
+ *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at
- *  
+ *
  *       http://www.apache.org/licenses/LICENSE-2.0
- *  
+ *
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS,
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *  
+ *
  *******************************************************************************/
 //
 //  UpdateCheck.m
@@ -86,6 +86,8 @@
 
 - (void) computeJson:(NSDictionary *)updateDataDictionary{
     
+    //NSLog(@"dict %@", updateDataDictionary.description);
+    
     NSDictionary *currentConfigurationDictionary = [Configuration getCurrentConfiguration];
     
     if ([Controller bundleIDControlCurrentConfiguration:currentConfigurationDictionary
@@ -114,17 +116,17 @@
         
         if ([forceUpdateString isEqualToString:@"true"] == YES || [forceUpdateString isEqualToString:@"1"]){
             
-            alertViewTitle = [Message getMessage:@"update_required"];
-            cancelButtonTitle = [Message getMessage:@"exit_application"];
+            alertViewTitle = [[Message sharedInstance] getMessage:@"update_required"];
+            cancelButtonTitle = [[Message sharedInstance] getMessage:@"exit_application"];
             
         }else{
             
-            alertViewTitle = [Message getMessage:@"update_found"];
-            cancelButtonTitle = [Message getMessage:@"remind_me_later"];
+            alertViewTitle = [[Message sharedInstance] getMessage:@"update_found"];
+            cancelButtonTitle = [[Message sharedInstance] getMessage:@"remind_me_later"];
             
         }
         
-        okButtonTitle = [Message getMessage:@"install_"];
+        okButtonTitle = [[Message sharedInstance] getMessage:@"install_"];
         
         NSDictionary *descriptions = [Controller getDescriptionsForLanguage:[currentConfigurationDictionary objectForKey:@"deviceLanguage"] fromUpdate:updateDictionary];
         

@@ -27,67 +27,49 @@
 
 @implementation Message
 
-+ (NSString *) getMessage:(NSString *)messageType{
++(instancetype)sharedInstance
+{
+    static id shared;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        shared = [[self alloc] init];
+    });
+    return shared;
+}
+
+
+- (NSString *) getMessage:(NSString *)messageType{
+    return [self getLocalisedStringForKey:messageType preferredLanguage:self.preferredLanguage];
+}
+
+#pragma mark - Localisation Support
+
+/**
+ *  Localisation support. Gets localised string from language bundle.
+ *
+ *  @param key key of localised string
+ *
+ *  @return localised string
+ */
+-(NSString *)getLocalisedStringForKey:(NSString *)key preferredLanguage:(NSString *)preferredLanguage{
+    NSString *systemLocale = [[NSLocale preferredLanguages] objectAtIndex:0];
     
-    NSString *message;
+    static NSBundle *languageBundle = nil;
     
-    if ([messageType isEqualToString:@"update_required"]) {
-        message = @"Güncelleme gerekli";
+    if (preferredLanguage) {
+        if (![[[NSBundle mainBundle] localizations] containsObject:preferredLanguage]) {
+            if (![[[NSBundle mainBundle] localizations] containsObject:systemLocale]) {
+                NSLog(@"Preferred language is not avaible.");
+                systemLocale = @"en";
+            }
+        }else {
+            systemLocale = preferredLanguage;
+        }
     }
     
-    if ([messageType isEqualToString:@"update_found"]) {
-        message = @"Güncelleme bulundu";
-    }
-
-    if ([messageType isEqualToString:@"install_"]) {
-        message = @"Kur";
-    }
-
-    if ([messageType isEqualToString:@"downloading_new_version"]) {
-        message = @"Yeni versiyon indiriliyor...";
-    }
-
-    if ([messageType isEqualToString:@"exit_application"]) {
-        message = @"Uygulamadan çık";
-    }
-
-    if ([messageType isEqualToString:@"remind_me_later"]) {
-        message = @"Daha sonra hatırlat";
-    }
-
-    if ([messageType isEqualToString:@"error_occured"]) {
-        message = @"Hata oluştu";
-    }
-
-    if ([messageType isEqualToString:@"update_couldn_t_be_completed"]) {
-        message = @"Güncelleme tamamlanamadı";
-    }
-
-    if ([messageType isEqualToString:@"continue_"]) {
-        message = @"Devam et";
-    }
-
-    if ([messageType isEqualToString:@"view"]) {
-        message = @"Görüntüle";
-    }
-
-    if ([messageType isEqualToString:@"close"]) {
-        message = @"Kapat";
-    }
-
-	if ([messageType isEqualToString:@"service_is_not_available"]) {
-        message = @"Hizmet kullanılamıyor";
-    }
-
-    if ([messageType isEqualToString:@"launch"]) {
-        message = @"Çalıştır";
-    }
-
-    if (message == nil)
-        return nil;
-    else
-        return message;
-    
+    languageBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:systemLocale ofType:@"lproj"]];
+    NSString *localizedString = [languageBundle localizedStringForKey:key value:@"" table:nil];
+    return localizedString;
 }
 
 @end

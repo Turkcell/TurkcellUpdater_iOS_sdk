@@ -27,6 +27,7 @@
 		98D0577319FD16FA009BECED /* updater_strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98D0576319FD16FA009BECED /* updater_strings.plist */; };
 		98D0577419FD16FA009BECED /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576519FD16FA009BECED /* UpdaterController.m */; };
 		98D0577519FD16FA009BECED /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576819FD16FA009BECED /* UpdateServerIntegration.m */; };
+		98D4B7F61B569301009EFADB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98D4B7F81B569301009EFADB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		98D0576619FD16FA009BECED /* UpdaterControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterControllerDelegate.h; sourceTree = "<group>"; };
 		98D0576719FD16FA009BECED /* UpdateServerIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateServerIntegration.h; sourceTree = "<group>"; };
 		98D0576819FD16FA009BECED /* UpdateServerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateServerIntegration.m; sourceTree = "<group>"; };
+		98D4B7F71B569301009EFADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		98D4B7F91B569315009EFADB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,7 @@
 				98D0576619FD16FA009BECED /* UpdaterControllerDelegate.h */,
 				98D0576719FD16FA009BECED /* UpdateServerIntegration.h */,
 				98D0576819FD16FA009BECED /* UpdateServerIntegration.m */,
+				98D4B7F81B569301009EFADB /* Localizable.strings */,
 			);
 			path = TurkcellUpdaterDSK;
 			sourceTree = "<group>";
@@ -259,6 +263,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 98D0571919FD16BB009BECED;
 			productRefGroup = 98D0572319FD16BB009BECED /* Products */;
@@ -276,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98D4B7F61B569301009EFADB /* Localizable.strings in Resources */,
 				98D0573119FD16BB009BECED /* Main.storyboard in Resources */,
 				98D0577319FD16FA009BECED /* updater_strings.plist in Resources */,
 				98D0573619FD16BB009BECED /* LaunchScreen.xib in Resources */,
@@ -348,6 +354,15 @@
 				98D0573519FD16BB009BECED /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		98D4B7F81B569301009EFADB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98D4B7F71B569301009EFADB /* en */,
+				98D4B7F91B569315009EFADB /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

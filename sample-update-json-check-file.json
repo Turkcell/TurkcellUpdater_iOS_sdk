@@ -3,17 +3,20 @@
    "successMsg":"Ok",
    "updates":[  
       {  
-            "filters": {
-                "appVersionName":"<=2.2"
-            }, 
-
-         "forceUpdate":true,
-         "forceExit":false,
-"targetWebsiteUrl": "https://itunes.apple.com/tr/app/turkcell-online-kamera/id724524441?mt=8", 
+        "filters": {
+            "appVersionName":"<=2.7"
+        }, 
+        "forceUpdate":true,
+        "forceExit":false,
+		"targetWebsiteUrl": "https://itunes.apple.com/tr/app/turkcell-online-kamera/id724524441?mt=8", 
          "descriptions":{  
+        	"en":{ 
+               "message":"There is a new version.",
+               "warnings":"Please update your application."
+            },          
             "*":{  
-               "message":"Yeni versiyon tespit edildi. Güncelleme yapınız.",
-               "warnings":"uyarı (uyarı)"
+               "message":"Yeni versiyon tespit edildi.",
+               "warnings":"Lütfen. Güncelleme yapınız."
             }
          }
       }

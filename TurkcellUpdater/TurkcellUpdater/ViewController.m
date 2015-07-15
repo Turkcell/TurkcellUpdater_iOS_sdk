@@ -40,6 +40,7 @@
     NSString *updateServerURL = self.urlTextField.text;
     
     UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL delegate:self postProperties:self.switchButton.on];
+    //UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL preferredLanguage:@"tr" delegate:self postProperties:self.switchButton.on];
     [self.view addSubview:updaterController];
     [updaterController getUpdateInformation];
     

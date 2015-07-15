@@ -1,19 +1,19 @@
 /*******************************************************************************
  *
  *  Copyright (C) 2014 Turkcell
- *  
+ *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at
- *  
+ *
  *       http://www.apache.org/licenses/LICENSE-2.0
- *  
+ *
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS,
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *  
+ *
  *******************************************************************************/
 //
 //  UpdateServerIntegration.m
@@ -49,7 +49,7 @@
     NSDictionary *propertyDictionary = [Configuration getCurrentConfiguration];
     
     NSString *url = [NSString stringWithFormat:@"%@?appPackageName=%@&deviceOsName=%@",serverURL,[propertyDictionary valueForKey:KEY_APP_PACKAGE_NAME],[propertyDictionary valueForKey:KEY_DEVICE_OS_NAME]];
-
+    
     //NSString *url = @"http://localhost/phptest/redirect.php";
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]
@@ -66,7 +66,7 @@
 }
 
 - (void) getJsonFromServerWithoutParameters:(NSString *)serverURL{
-        
+    
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:serverURL]
                                                                 cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                                             timeoutInterval:20];
@@ -86,14 +86,14 @@
     NSError *error;
     NSData *jsonData = [NSJSONSerialization
                         dataWithJSONObject:@{
-                        KEY_APP_PACKAGE_NAME: [propertyDictionary valueForKey:KEY_APP_PACKAGE_NAME],
-                        KEY_APP_VERSION_NAME: [propertyDictionary valueForKey:KEY_APP_VERSION_NAME],
-                        KEY_DEVICE_OS_VERSION: [propertyDictionary valueForKey:KEY_DEVICE_OS_VERSION],
-                        KEY_DEVICE_OS_NAME: [propertyDictionary valueForKey:KEY_DEVICE_OS_NAME],
-                        KEY_DEVICE_MODEL: [propertyDictionary valueForKey:KEY_DEVICE_MODEL],
-                        KEY_DEVICE_IS_TABLET: [propertyDictionary valueForKey:KEY_DEVICE_IS_TABLET],
-                        KEY_DEVICE_LANGUAGE: [propertyDictionary valueForKey:KEY_DEVICE_LANGUAGE]
-                        }
+                                             KEY_APP_PACKAGE_NAME: [propertyDictionary valueForKey:KEY_APP_PACKAGE_NAME],
+                                             KEY_APP_VERSION_NAME: [propertyDictionary valueForKey:KEY_APP_VERSION_NAME],
+                                             KEY_DEVICE_OS_VERSION: [propertyDictionary valueForKey:KEY_DEVICE_OS_VERSION],
+                                             KEY_DEVICE_OS_NAME: [propertyDictionary valueForKey:KEY_DEVICE_OS_NAME],
+                                             KEY_DEVICE_MODEL: [propertyDictionary valueForKey:KEY_DEVICE_MODEL],
+                                             KEY_DEVICE_IS_TABLET: [propertyDictionary valueForKey:KEY_DEVICE_IS_TABLET],
+                                             KEY_DEVICE_LANGUAGE: [propertyDictionary valueForKey:KEY_DEVICE_LANGUAGE]
+                                             }
                         options:0
                         error:&error];
     if (!jsonData)
@@ -102,7 +102,7 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:serverURL]
                                                                 cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                                             timeoutInterval:20];
-        
+    
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -142,7 +142,12 @@
     NSError *error;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&error];
     
+    //NSLog(@"dict %@", json.description);
+    
     if (json == nil) {
+        
+        //NSLog(@"dict %@", json.description);
+        
         error = [[NSError alloc] initWithDomain:@"JSON_DATA_SERIALIZATION" code:-1 userInfo:nil];
         [delegate performSelector:postSelector withObject:nil withObject:error];
     }else{

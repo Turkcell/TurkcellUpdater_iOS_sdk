@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Qf-gC-Evt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Qf-gC-Evt">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Update Sample-->
@@ -17,25 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-Gd-oTv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-Gd-oTv">
                                 <rect key="frame" x="11" y="79" width="298" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Sev-Wm-csq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXa-5l-p4Z" userLabel="result label">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXa-5l-p4Z" userLabel="result label">
                                 <rect key="frame" x="11" y="284" width="298" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cT3-LM-0Dl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Post Properties" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-VJ-j19">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Post Properties" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-VJ-j19">
                                 <rect key="frame" x="11" y="121" width="130" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcM-M5-GKf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcM-M5-GKf">
                                 <rect key="frame" x="11" y="202" width="298" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="h5k-VV-n7e"/>
+                                </constraints>
                                 <state key="normal" title="Check Update">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,11 +52,22 @@
                                     <action selector="checkForUpdate:" destination="tui-Pl-baY" eventType="touchUpInside" id="YOk-w8-c0J"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pq-jr-jkR">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pq-jr-jkR">
                                 <rect key="frame" x="260" y="122" width="51" height="31"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LcM-M5-GKf" secondAttribute="trailing" constant="11" id="4wt-Pw-fT4"/>
+                            <constraint firstItem="aL7-Gd-oTv" firstAttribute="top" secondItem="Z1K-DC-fz1" secondAttribute="bottom" constant="15" id="7ui-aO-HoN"/>
+                            <constraint firstItem="vXa-5l-p4Z" firstAttribute="leading" secondItem="tmw-8d-R8P" secondAttribute="leading" constant="11" id="Owe-7t-sH2"/>
+                            <constraint firstAttribute="trailing" secondItem="aL7-Gd-oTv" secondAttribute="trailing" constant="11" id="ZXs-af-z8B"/>
+                            <constraint firstItem="aL7-Gd-oTv" firstAttribute="leading" secondItem="tmw-8d-R8P" secondAttribute="leading" constant="11" id="eE9-Tc-seh"/>
+                            <constraint firstItem="LcM-M5-GKf" firstAttribute="top" secondItem="aL7-Gd-oTv" secondAttribute="bottom" constant="93" id="gjs-PF-ytC"/>
+                            <constraint firstItem="LcM-M5-GKf" firstAttribute="leading" secondItem="tmw-8d-R8P" secondAttribute="leading" constant="11" id="iCw-1A-Ihe"/>
+                            <constraint firstAttribute="trailing" secondItem="vXa-5l-p4Z" secondAttribute="trailing" constant="11" id="qfF-tj-KbG"/>
+                            <constraint firstItem="vXa-5l-p4Z" firstAttribute="top" secondItem="LcM-M5-GKf" secondAttribute="bottom" constant="38" id="y9H-N3-Ylh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Update Sample" id="hNP-z3-S2p"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
