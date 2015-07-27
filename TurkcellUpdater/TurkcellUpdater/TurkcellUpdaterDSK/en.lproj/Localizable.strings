@@ -1,11 +1,11 @@
 "update_required" = "Update Required";
 "update_found" = "Update Found";
 "install_" = "Install";
-"downloading_new_version" = "Downloading new version..";
+"downloading_new_version" = "Downloading new version...";
 "exit_application" = "Exit";
 "remind_me_later" = "Remind me";
 "error_occured" = "Error occured";
-"update_couldn_t_be_completed" = "Update could not be clompleted";
+"update_couldn_t_be_completed" = "Update could not be completed";
 "continue_" = "Continue";
 "view" = "Show";
 "close" = "Close";
