@@ -8,6 +8,8 @@ Turkcell Updater for iOS is developed to help developers easily handle new versi
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
+<h2>Update Request Example</h2>
+This documents describes usage and structure configuration files used by Turkcell Updater library.
 <h2>Configuration Guide</h2>
 This documents describes usage and structure configuration files used by Turkcell Updater library.
 <h3>Usage</h3>

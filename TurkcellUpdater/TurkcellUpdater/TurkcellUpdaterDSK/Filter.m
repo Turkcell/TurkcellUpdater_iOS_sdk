@@ -221,6 +221,17 @@
     }
     
     if ([filterPart rangeOfString:@"<>"].location == 0) {
+        
+        NSComparisonResult result = [[filterPart substringFromIndex:2] compare:value];
+        
+        if (result != NSOrderedSame) {
+            return YES;
+        } else {
+            return NO;
+        }
+        
+//old version of comparison. which was not suitable for 3 digit versions
+/*
         double currentConfigurationValueDouble = [value doubleValue];
         double filterValueDouble = [[filterPart substringFromIndex:2] doubleValue];
         
@@ -228,9 +239,21 @@
             return NO;
         else
             return YES;
+*/
     }
     
     if ([filterPart rangeOfString:@"<="].location == 0) {
+        
+        NSComparisonResult result = [[filterPart substringFromIndex:2] compare:value];
+        
+        if (result == NSOrderedSame || result == NSOrderedDescending) {
+            return YES;
+        } else {
+            return NO;
+        }
+        
+//old version of comparison. which was not suitable for 3 digit versions
+/*
         double currentConfigurationValueDouble = [value doubleValue];
         double filterValueDouble = [[filterPart substringFromIndex:2] doubleValue];
         
@@ -238,9 +261,21 @@
             return NO;
         else
             return YES;
+*/
     }
     
     if ([filterPart rangeOfString:@">="].location == 0) {
+        
+        NSComparisonResult result = [[filterPart substringFromIndex:2] compare:value];
+        
+        if (result == NSOrderedSame || result == NSOrderedAscending) {
+            return YES;
+        } else {
+            return NO;
+        }
+       
+//old version of comparison. which was not suitable for 3 digit versions
+/*
         double currentConfigurationValueDouble = [value doubleValue];
         double filterValueDouble = [[filterPart substringFromIndex:2] doubleValue];
         
@@ -248,9 +283,21 @@
             return NO;
         else
             return YES;
+*/
     }
     
     if ([filterPart rangeOfString:@"<"].location == 0) {
+        
+        NSComparisonResult result = [[filterPart substringFromIndex:1] compare:value];
+        
+        if (result == NSOrderedDescending) {
+            return YES;
+        } else {
+            return NO;
+        }
+        
+//old version of comparison. which was not suitable for 3 digit versions
+/*
         double currentConfigurationValueDouble = [value doubleValue];
         double filterValueDouble = [[filterPart substringFromIndex:1] doubleValue];
         
@@ -258,9 +305,20 @@
             return NO;
         else
             return YES;
+*/
     }
     
     if ([filterPart rangeOfString:@">"].location == 0) {
+        NSComparisonResult result = [[filterPart substringFromIndex:1] compare:value];
+        
+        if (result == NSOrderedAscending) {
+            return YES;
+        } else {
+            return NO;
+        }
+
+//old version of comparison. which was not suitable for 3 digit versions
+/*
         double currentConfigurationValueDouble = [value doubleValue];
         double filterValueDouble = [[filterPart substringFromIndex:1] doubleValue];
         
@@ -268,6 +326,7 @@
             return NO;
         else
             return YES;
+*/
     }
     
     if ([filterPart rangeOfString:@"*"].length > 0) {
