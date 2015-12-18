@@ -110,7 +110,6 @@
     [messageLabel setTextAlignment:NSTextAlignmentLeft];
     [messageLabel setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
     [messageLabel setContentInset:UIEdgeInsetsMake(-12,-5, 5,0)];
-    [messageLabel setEditable:NO];
     [messageLabel setScrollEnabled:YES];
     [messageLabel setShowsHorizontalScrollIndicator:YES];
     [messageLabel setShowsVerticalScrollIndicator:YES];

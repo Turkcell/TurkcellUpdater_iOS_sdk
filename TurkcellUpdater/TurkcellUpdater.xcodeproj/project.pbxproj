@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98C1338B1C24055700FC9923 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1338A1C24055700FC9923 /* main.m */; };
+		98C1338E1C24055700FC9923 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1338D1C24055700FC9923 /* AppDelegate.m */; };
+		98C133911C24055700FC9923 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C133901C24055700FC9923 /* ViewController.m */; };
+		98C133941C24055700FC9923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C133921C24055700FC9923 /* Main.storyboard */; };
+		98C133961C24055700FC9923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C133951C24055700FC9923 /* Assets.xcassets */; };
+		98C1339B1C24057900FC9923 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574D19FD16FA009BECED /* Configuration.m */; };
+		98C1339C1C24057900FC9923 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574F19FD16FA009BECED /* Controller.m */; };
+		98C1339D1C24057900FC9923 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */; };
+		98C1339E1C24057900FC9923 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575319FD16FA009BECED /* Filter.m */; };
+		98C1339F1C24057900FC9923 /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575519FD16FA009BECED /* FLImageView.m */; };
+		98C133A01C24057900FC9923 /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575719FD16FA009BECED /* FullyLoaded.m */; };
+		98C133A11C24057900FC9923 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575919FD16FA009BECED /* Message.m */; };
+		98C133A21C24057900FC9923 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575B19FD16FA009BECED /* MessageView.m */; };
+		98C133A31C24057900FC9923 /* UIAlertViewCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */; };
+		98C133A41C24057900FC9923 /* UpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576119FD16FA009BECED /* UpdateCheck.m */; };
+		98C133A51C24057900FC9923 /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576519FD16FA009BECED /* UpdaterController.m */; };
+		98C133A61C24057900FC9923 /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576819FD16FA009BECED /* UpdateServerIntegration.m */; };
+		98C133A71C24058000FC9923 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98D4B7F81B569301009EFADB /* Localizable.strings */; };
+		98C133A81C24058500FC9923 /* updater_strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98D0576319FD16FA009BECED /* updater_strings.plist */; };
 		98D0572819FD16BB009BECED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572719FD16BB009BECED /* main.m */; };
 		98D0572B19FD16BB009BECED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572A19FD16BB009BECED /* AppDelegate.m */; };
 		98D0572E19FD16BB009BECED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572D19FD16BB009BECED /* ViewController.m */; };
@@ -41,6 +60,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98C133871C24055700FC9923 /* TurkcellUpdaterTVOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkcellUpdaterTVOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98C1338A1C24055700FC9923 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		98C1338C1C24055700FC9923 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		98C1338D1C24055700FC9923 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		98C1338F1C24055700FC9923 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		98C133901C24055700FC9923 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		98C133931C24055700FC9923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98C133951C24055700FC9923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98C133971C24055700FC9923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D0572219FD16BB009BECED /* TurkcellUpdater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkcellUpdater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D0572619FD16BB009BECED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D0572719FD16BB009BECED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		98C133841C24055700FC9923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98D0571F19FD16BB009BECED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,11 +139,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98C133881C24055700FC9923 /* TurkcellUpdaterTVOS */ = {
+			isa = PBXGroup;
+			children = (
+				98C1338C1C24055700FC9923 /* AppDelegate.h */,
+				98C1338D1C24055700FC9923 /* AppDelegate.m */,
+				98C1338F1C24055700FC9923 /* ViewController.h */,
+				98C133901C24055700FC9923 /* ViewController.m */,
+				98C133921C24055700FC9923 /* Main.storyboard */,
+				98C133951C24055700FC9923 /* Assets.xcassets */,
+				98C133971C24055700FC9923 /* Info.plist */,
+				98C133891C24055700FC9923 /* Supporting Files */,
+			);
+			path = TurkcellUpdaterTVOS;
+			sourceTree = "<group>";
+		};
+		98C133891C24055700FC9923 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				98C1338A1C24055700FC9923 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		98D0571919FD16BB009BECED = {
 			isa = PBXGroup;
 			children = (
 				98D0572419FD16BB009BECED /* TurkcellUpdater */,
 				98D0573E19FD16BB009BECED /* TurkcellUpdaterTests */,
+				98C133881C24055700FC9923 /* TurkcellUpdaterTVOS */,
 				98D0572319FD16BB009BECED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +177,7 @@
 			children = (
 				98D0572219FD16BB009BECED /* TurkcellUpdater.app */,
 				98D0573B19FD16BB009BECED /* TurkcellUpdaterTests.xctest */,
+				98C133871C24055700FC9923 /* TurkcellUpdaterTVOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,12 +249,12 @@
 				98D0576019FD16FA009BECED /* UpdateCheck.h */,
 				98D0576119FD16FA009BECED /* UpdateCheck.m */,
 				98D0576219FD16FA009BECED /* UpdateCheckDelegate.h */,
-				98D0576319FD16FA009BECED /* updater_strings.plist */,
 				98D0576419FD16FA009BECED /* UpdaterController.h */,
 				98D0576519FD16FA009BECED /* UpdaterController.m */,
 				98D0576619FD16FA009BECED /* UpdaterControllerDelegate.h */,
 				98D0576719FD16FA009BECED /* UpdateServerIntegration.h */,
 				98D0576819FD16FA009BECED /* UpdateServerIntegration.m */,
+				98D0576319FD16FA009BECED /* updater_strings.plist */,
 				98D4B7F81B569301009EFADB /* Localizable.strings */,
 			);
 			path = TurkcellUpdaterDSK;
@@ -203,6 +263,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		98C133861C24055700FC9923 /* TurkcellUpdaterTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98C1339A1C24055700FC9923 /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTVOS" */;
+			buildPhases = (
+				98C133831C24055700FC9923 /* Sources */,
+				98C133841C24055700FC9923 /* Frameworks */,
+				98C133851C24055700FC9923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TurkcellUpdaterTVOS;
+			productName = TurkcellUpdaterTVOS;
+			productReference = 98C133871C24055700FC9923 /* TurkcellUpdaterTVOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		98D0572119FD16BB009BECED /* TurkcellUpdater */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98D0574519FD16BB009BECED /* Build configuration list for PBXNativeTarget "TurkcellUpdater" */;
@@ -247,6 +324,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Abdulbasıt Tanhan";
 				TargetAttributes = {
+					98C133861C24055700FC9923 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					98D0572119FD16BB009BECED = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -271,12 +351,24 @@
 			projectRoot = "";
 			targets = (
 				98D0572119FD16BB009BECED /* TurkcellUpdater */,
+				98C133861C24055700FC9923 /* TurkcellUpdaterTVOS */,
 				98D0573A19FD16BB009BECED /* TurkcellUpdaterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		98C133851C24055700FC9923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C133961C24055700FC9923 /* Assets.xcassets in Resources */,
+				98C133A81C24058500FC9923 /* updater_strings.plist in Resources */,
+				98C133A71C24058000FC9923 /* Localizable.strings in Resources */,
+				98C133941C24055700FC9923 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98D0572019FD16BB009BECED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +391,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		98C133831C24055700FC9923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C1339F1C24057900FC9923 /* FLImageView.m in Sources */,
+				98C1339D1C24057900FC9923 /* CustomIOS7AlertView.m in Sources */,
+				98C1339E1C24057900FC9923 /* Filter.m in Sources */,
+				98C133911C24055700FC9923 /* ViewController.m in Sources */,
+				98C1339C1C24057900FC9923 /* Controller.m in Sources */,
+				98C1338E1C24055700FC9923 /* AppDelegate.m in Sources */,
+				98C133A31C24057900FC9923 /* UIAlertViewCustom.m in Sources */,
+				98C133A61C24057900FC9923 /* UpdateServerIntegration.m in Sources */,
+				98C133A51C24057900FC9923 /* UpdaterController.m in Sources */,
+				98C1339B1C24057900FC9923 /* Configuration.m in Sources */,
+				98C133A11C24057900FC9923 /* Message.m in Sources */,
+				98C133A41C24057900FC9923 /* UpdateCheck.m in Sources */,
+				98C133A01C24057900FC9923 /* FullyLoaded.m in Sources */,
+				98C133A21C24057900FC9923 /* MessageView.m in Sources */,
+				98C1338B1C24055700FC9923 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98D0571E19FD16BB009BECED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +454,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		98C133921C24055700FC9923 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98C133931C24055700FC9923 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		98D0572F19FD16BB009BECED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -368,6 +490,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		98C133981C24055700FC9923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = TurkcellUpdaterTVOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.turkcell.TurkcellUpdaterTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		98C133991C24055700FC9923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = TurkcellUpdaterTVOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.turkcell.TurkcellUpdaterTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 		98D0574319FD16BB009BECED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -503,6 +661,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		98C1339A1C24055700FC9923 /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98C133981C24055700FC9923 /* Debug */,
+				98C133991C24055700FC9923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		98D0571D19FD16BB009BECED /* Build configuration list for PBXProject "TurkcellUpdater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

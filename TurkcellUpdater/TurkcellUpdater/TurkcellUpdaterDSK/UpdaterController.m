@@ -303,7 +303,6 @@
     [customTextView setTextAlignment:NSTextAlignmentLeft];
     [customTextView setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
     [customTextView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [customTextView setEditable:NO];
     //[customTextView setUserInteractionEnabled:NO];
     [customTextView setScrollEnabled:YES];
     [customTextView setShowsHorizontalScrollIndicator:YES];

@@ -51,7 +51,8 @@
 
 - (void) updateActionChosen
 {
-    
+    self.resultLabel.text = @"Update action chosen";
+
 }
 
 - (void) updateCheckCompleted{
