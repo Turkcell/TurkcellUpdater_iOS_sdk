@@ -240,7 +240,6 @@
             if ([messageLastShownDatePlusThreeHours compare:now] == NSOrderedDescending){
                 showMessage = NO;
             }
-            
         }
         
         if (showMessage) {
@@ -281,7 +280,7 @@
             [messageViewDictionary setObject:warnings forKey:@"warnings"];
             [messageViewDictionary setObject:targetWebsiteUrl forKey:@"targetWebsiteUrl"];
             
-            [[self updateCheckDelegate] displayMessageFound:messageViewDictionary];
+            [[self updateCheckDelegate] updateNotFound];
             
         }else{
             [[self updateCheckDelegate] updateNotFound];

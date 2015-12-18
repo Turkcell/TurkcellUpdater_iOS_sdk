@@ -28,16 +28,13 @@
 #import "UpdateCheck.h"
 #import "UIAlertViewCustom.h"
 #import "Message.h"
-#import "FLImageView.h"
-#import "CustomIOS7AlertView.h"
-
 
 #define MESSAGEVIEW_WIDTH 290.0
 #define MESSAGEVIEW_HEIGHT 200.0
 #define LABEL_HEIGHT MESSAGEVIEW_HEIGHT / 10.0
 #define LABEL_FONTSIZE 14.0
 
-@interface UpdaterController() <UpdateCheckDelegate,CustomIOS7AlertViewDelegate>
+@interface UpdaterController() <UpdateCheckDelegate>
 
 @end
 
@@ -138,11 +135,9 @@
                                  style:UIAlertActionStyleDefault
                                  handler:^(UIAlertAction * action)
                                  {
+                                     [updaterControllerDelegate updateActionChosen];
                                      NSString *targetPackageURL = [(UIAlertViewCustom *)alert targetPackageURL];
                                      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:targetPackageURL]];
-                                     [updaterControllerDelegate updateActionChosen];
-                                     [alert dismissViewControllerAnimated:YES completion:nil];
-                                     
                                  }];
             
             [alert addAction:ok];
@@ -155,18 +150,7 @@
                                      style:UIAlertActionStyleDefault
                                      handler:^(UIAlertAction * action)
                                      {
-                                         NSString *forceUpdate = [(UIAlertViewCustom *)alert forceUpdate];
-                                         NSString *targetPackageURL = [(UIAlertViewCustom *)alert targetPackageURL];
-                                         
-                                         if ([forceUpdate isEqualToString:@"true"] || [forceUpdate isEqualToString:@"1"]){
-                                             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:targetPackageURL]];
-                                             [updaterControllerDelegate updateActionChosen];
-                                         }
-                                         else {
-                                             [updaterControllerDelegate updateCheckCompleted];
-                                         }
-                                         [alert dismissViewControllerAnimated:YES completion:nil];
-                                         
+                                         [updaterControllerDelegate updateCheckCompleted];
                                      }];
             
             [alert addAction:cancel];
@@ -188,97 +172,6 @@
 - (void) updateNotFound{
     NSLog(@"updateNotFound");
     [updaterControllerDelegate updateCheckCompleted];
-}
-
-- (void) displayMessageFound:(NSDictionary *)messageDictionary{
-    /*
-     
-     messageView = [MessageView initWithTitle:[messageDictionary objectForKey:@"title"]
-     message:[messageDictionary objectForKey:@"message"]
-     imageUrl:[messageDictionary objectForKey:@"imageUrl"]
-     targetWebsiteUrl:[messageDictionary objectForKey:@"targetWebsiteUrl"]
-     delegate:self];
-     
-     [messageView showOnView:[self superview]];
-     
-     */
-    
-    // Here we need to pass a full frame
-    CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
-    
-    // Add some custom content to the alert view
-    [alertView setContainerView:[self createMessageViewWithDictionary:messageDictionary]];
-    
-    // Modify the parameters
-    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:[[Message sharedInstance] getMessage:@"install_"], [[Message sharedInstance] getMessage:@"remind_me_later"], nil]];
-    [alertView setDelegate:self];
-    
-    // You may use a Block, rather than a delegate.
-    [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, NSInteger buttonIndex) {
-        //NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
-        [alertView close];
-    }];
-    
-    [alertView setUseMotionEffects:true];
-    
-    // And launch the dialog
-    [alertView show];
-    
-    
-}
-
-- (UIView *)createMessageViewWithDictionary:(NSDictionary *)messageDictionary
-{
-    _targetWebSiteURL = [messageDictionary objectForKey:@"targetWebsiteUrl"];
-    
-    UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MESSAGEVIEW_WIDTH, MESSAGEVIEW_HEIGHT)];
-    
-    FLImageView *videoThumbImage = [[FLImageView alloc] initWithFrame:CGRectMake(demoView.frame.origin.x + demoView.frame.size.width / 20.0,
-                                                                                 demoView.frame.origin.y + demoView.frame.size.height / 2.5,
-                                                                                 demoView.frame.size.width / 3.5,
-                                                                                 demoView.frame.size.width / 3.5)];
-    videoThumbImage.showsLoadingActivity = YES;
-    videoThumbImage.autoresizeEnabled = NO;
-    [videoThumbImage loadImageAtURLString:[messageDictionary objectForKey:@"imageUrl"] placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    [demoView addSubview:videoThumbImage];
-    
-    [demoView addSubview:[self createLabelWithFrame:CGRectMake(demoView.frame.origin.x + 20, demoView.frame.origin.y + demoView.frame.size.height / 14.0, demoView.frame.size.width - 20, LABEL_HEIGHT)
-                                              title:[messageDictionary objectForKey:@"title"]
-                                           fontSize:LABEL_FONTSIZE + 2.0
-                                             isBold:YES
-                                          alignment:NSTextAlignmentCenter]];
-    
-    [demoView addSubview:[self createLabelWithFrame:CGRectMake(demoView.frame.origin.x + demoView.frame.size.width / 20.0, demoView.frame.origin.y + demoView.frame.size.height / 3.7, demoView.frame.size.width - 20, LABEL_HEIGHT)
-                                              title:[messageDictionary objectForKey:@"whatIsNew"]
-                                           fontSize:LABEL_FONTSIZE
-                                             isBold:NO
-                                          alignment:NSTextAlignmentLeft]];
-    [demoView addSubview:[self createLabelWithFrame:CGRectMake(demoView.frame.origin.x + demoView.frame.size.width / 20.0, demoView.frame.size.height - demoView.frame.size.height / 7.0, demoView.frame.size.width - 20, LABEL_HEIGHT)
-                                              title:[messageDictionary objectForKey:@"warnings"]
-                                           fontSize:LABEL_FONTSIZE
-                                             isBold:NO
-                                          alignment:NSTextAlignmentLeft]];
-    
-    [demoView addSubview:[self createTextViewWithFrame:CGRectMake(demoView.frame.origin.x + demoView.frame.size.width / 3.0,
-                                                                  demoView.frame.origin.y + demoView.frame.size.height / 2.5,
-                                                                  demoView.frame.size.width / 1.5,
-                                                                  demoView.frame.size.height / 2.5)
-                                                 title:[messageDictionary objectForKey:@"message"]
-                                              fontSize:14]];
-    
-    return demoView;
-}
-
-- (void)customIOS7dialogButtonTouchUpInside: (CustomIOS7AlertView *)alertView clickedButtonAtIndex: (NSInteger)buttonIndex
-{
-    //NSLog(@"Delegate: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
-    
-    if (buttonIndex == 0)
-        [self viewButtonClicked];
-    else
-        [self OKButtonClicked];
-    
-    [alertView close];
 }
 
 - (UILabel*)createLabelWithFrame:(CGRect)frame title:(NSString*)title fontSize:(CGFloat)fontSize isBold:(BOOL)isBold alignment:(NSTextAlignment)alignment{

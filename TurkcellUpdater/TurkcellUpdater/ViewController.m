@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "UpdaterControllerDelegate.h"
 #import "UpdaterController.h"
 
 
@@ -15,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *urlTextField;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
-@property (weak, nonatomic) IBOutlet UISwitch *switchButton;
 
 @end
 
@@ -26,10 +24,8 @@
     [super viewDidLoad];
     
     //self.urlTextField.text = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
-    
     self.urlTextField.text = @"http://127.0.0.1/update.json";
     
-    self.switchButton.on = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,9 +38,7 @@
     
     NSString *updateServerURL = self.urlTextField.text;
     
-    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL delegate:self postProperties:self.switchButton.on parentViewController:self];
-    //UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL preferredLanguage:@"tr" delegate:self postProperties:self.switchButton.on];
-    //[self.view addSubview:updaterController];
+    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL delegate:self postProperties:NO parentViewController:self];
     [updaterController getUpdateInformation];
     
 }

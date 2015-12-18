@@ -14,12 +14,8 @@
 		98C133961C24055700FC9923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C133951C24055700FC9923 /* Assets.xcassets */; };
 		98C1339B1C24057900FC9923 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574D19FD16FA009BECED /* Configuration.m */; };
 		98C1339C1C24057900FC9923 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574F19FD16FA009BECED /* Controller.m */; };
-		98C1339D1C24057900FC9923 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */; };
 		98C1339E1C24057900FC9923 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575319FD16FA009BECED /* Filter.m */; };
-		98C1339F1C24057900FC9923 /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575519FD16FA009BECED /* FLImageView.m */; };
-		98C133A01C24057900FC9923 /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575719FD16FA009BECED /* FullyLoaded.m */; };
 		98C133A11C24057900FC9923 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575919FD16FA009BECED /* Message.m */; };
-		98C133A21C24057900FC9923 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575B19FD16FA009BECED /* MessageView.m */; };
 		98C133A31C24057900FC9923 /* UIAlertViewCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */; };
 		98C133A41C24057900FC9923 /* UpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576119FD16FA009BECED /* UpdateCheck.m */; };
 		98C133A51C24057900FC9923 /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576519FD16FA009BECED /* UpdaterController.m */; };
@@ -35,12 +31,8 @@
 		98D0574219FD16BB009BECED /* TurkcellUpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574119FD16BB009BECED /* TurkcellUpdaterTests.m */; };
 		98D0576919FD16FA009BECED /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574D19FD16FA009BECED /* Configuration.m */; };
 		98D0576A19FD16FA009BECED /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574F19FD16FA009BECED /* Controller.m */; };
-		98D0576B19FD16FA009BECED /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */; };
 		98D0576C19FD16FA009BECED /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575319FD16FA009BECED /* Filter.m */; };
-		98D0576D19FD16FA009BECED /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575519FD16FA009BECED /* FLImageView.m */; };
-		98D0576E19FD16FA009BECED /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575719FD16FA009BECED /* FullyLoaded.m */; };
 		98D0576F19FD16FA009BECED /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575919FD16FA009BECED /* Message.m */; };
-		98D0577019FD16FA009BECED /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575B19FD16FA009BECED /* MessageView.m */; };
 		98D0577119FD16FA009BECED /* UIAlertViewCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */; };
 		98D0577219FD16FA009BECED /* UpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576119FD16FA009BECED /* UpdateCheck.m */; };
 		98D0577319FD16FA009BECED /* updater_strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98D0576319FD16FA009BECED /* updater_strings.plist */; };
@@ -86,19 +78,10 @@
 		98D0574D19FD16FA009BECED /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		98D0574E19FD16FA009BECED /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		98D0574F19FD16FA009BECED /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
-		98D0575019FD16FA009BECED /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
-		98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		98D0575219FD16FA009BECED /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
 		98D0575319FD16FA009BECED /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
-		98D0575419FD16FA009BECED /* FLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLImageView.h; sourceTree = "<group>"; };
-		98D0575519FD16FA009BECED /* FLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLImageView.m; sourceTree = "<group>"; };
-		98D0575619FD16FA009BECED /* FullyLoaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullyLoaded.h; sourceTree = "<group>"; };
-		98D0575719FD16FA009BECED /* FullyLoaded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullyLoaded.m; sourceTree = "<group>"; };
 		98D0575819FD16FA009BECED /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		98D0575919FD16FA009BECED /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		98D0575A19FD16FA009BECED /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
-		98D0575B19FD16FA009BECED /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
-		98D0575C19FD16FA009BECED /* MessageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewDelegate.h; sourceTree = "<group>"; };
 		98D0575E19FD16FA009BECED /* UIAlertViewCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewCustom.h; sourceTree = "<group>"; };
 		98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewCustom.m; sourceTree = "<group>"; };
 		98D0576019FD16FA009BECED /* UpdateCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheck.h; sourceTree = "<group>"; };
@@ -231,19 +214,10 @@
 				98D0574D19FD16FA009BECED /* Configuration.m */,
 				98D0574E19FD16FA009BECED /* Controller.h */,
 				98D0574F19FD16FA009BECED /* Controller.m */,
-				98D0575019FD16FA009BECED /* CustomIOS7AlertView.h */,
-				98D0575119FD16FA009BECED /* CustomIOS7AlertView.m */,
 				98D0575219FD16FA009BECED /* Filter.h */,
 				98D0575319FD16FA009BECED /* Filter.m */,
-				98D0575419FD16FA009BECED /* FLImageView.h */,
-				98D0575519FD16FA009BECED /* FLImageView.m */,
-				98D0575619FD16FA009BECED /* FullyLoaded.h */,
-				98D0575719FD16FA009BECED /* FullyLoaded.m */,
 				98D0575819FD16FA009BECED /* Message.h */,
 				98D0575919FD16FA009BECED /* Message.m */,
-				98D0575A19FD16FA009BECED /* MessageView.h */,
-				98D0575B19FD16FA009BECED /* MessageView.m */,
-				98D0575C19FD16FA009BECED /* MessageViewDelegate.h */,
 				98D0575E19FD16FA009BECED /* UIAlertViewCustom.h */,
 				98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */,
 				98D0576019FD16FA009BECED /* UpdateCheck.h */,
@@ -321,7 +295,7 @@
 		98D0571A19FD16BB009BECED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Abdulbasıt Tanhan";
 				TargetAttributes = {
 					98C133861C24055700FC9923 = {
@@ -395,8 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98C1339F1C24057900FC9923 /* FLImageView.m in Sources */,
-				98C1339D1C24057900FC9923 /* CustomIOS7AlertView.m in Sources */,
 				98C1339E1C24057900FC9923 /* Filter.m in Sources */,
 				98C133911C24055700FC9923 /* ViewController.m in Sources */,
 				98C1339C1C24057900FC9923 /* Controller.m in Sources */,
@@ -407,8 +379,6 @@
 				98C1339B1C24057900FC9923 /* Configuration.m in Sources */,
 				98C133A11C24057900FC9923 /* Message.m in Sources */,
 				98C133A41C24057900FC9923 /* UpdateCheck.m in Sources */,
-				98C133A01C24057900FC9923 /* FullyLoaded.m in Sources */,
-				98C133A21C24057900FC9923 /* MessageView.m in Sources */,
 				98C1338B1C24055700FC9923 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,8 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D0576D19FD16FA009BECED /* FLImageView.m in Sources */,
-				98D0576B19FD16FA009BECED /* CustomIOS7AlertView.m in Sources */,
 				98D0576C19FD16FA009BECED /* Filter.m in Sources */,
 				98D0572E19FD16BB009BECED /* ViewController.m in Sources */,
 				98D0576A19FD16FA009BECED /* Controller.m in Sources */,
@@ -429,8 +397,6 @@
 				98D0576919FD16FA009BECED /* Configuration.m in Sources */,
 				98D0576F19FD16FA009BECED /* Message.m in Sources */,
 				98D0577219FD16FA009BECED /* UpdateCheck.m in Sources */,
-				98D0576E19FD16FA009BECED /* FullyLoaded.m in Sources */,
-				98D0577019FD16FA009BECED /* MessageView.m in Sources */,
 				98D0572819FD16BB009BECED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +512,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -609,6 +576,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TurkcellUpdater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.turkcell.TurkcellUpdater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -620,6 +588,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TurkcellUpdater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.turkcell.TurkcellUpdater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -638,6 +607,7 @@
 				);
 				INFOPLIST_FILE = TurkcellUpdaterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turkcell.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkcellUpdater.app/TurkcellUpdater";
 			};
@@ -653,6 +623,7 @@
 				);
 				INFOPLIST_FILE = TurkcellUpdaterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turkcell.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkcellUpdater.app/TurkcellUpdater";
 			};
