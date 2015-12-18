@@ -9,9 +9,42 @@ Turkcell Updater for iOS is developed to help developers easily handle new versi
 </head>
 <body>
 <h2>Update Request Example</h2>
-This documents describes usage and structure configuration files used by Turkcell Updater library.
+
+```
+    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:@"http://example.com/update.json" delegate:self postProperties:NO parentViewController:self];
+    [updaterController getUpdateInformation];
+```
+#####Sample Update Json
+
+```
+{  
+   "packageName":"com.turkcell.TurkcellUpdater",
+   "updates":[  
+      {  
+        "filters": {
+            "appVersionName":"<=2.7"
+        }, 
+        "forceUpdate":true,
+		"targetWebsiteUrl": "https://itunes.apple.com/tr/app/turkcell-online-kamera/id724524441?mt=8", 
+         "descriptions":{  
+        	"en":{ 
+               "message":"There is a new version.",
+               "warnings":"Please update your application."
+            },          
+            "*":{  
+               "message":"Yeni versiyon tespit edildi.",
+               "warnings":"Lütfen. Güncelleme yapınız."
+            }
+         }
+      }
+   ]
+}
+
+```
+
 <h2>Configuration Guide</h2>
-This documents describes usage and structure configuration files used by Turkcell Updater library.
+This documents  describes usage and structure configuration files used by Turkcell Updater library.
+
 <h3>Usage</h3>
 
 <h4>Updating an iOS application to a new version served on AppStore</h4>
