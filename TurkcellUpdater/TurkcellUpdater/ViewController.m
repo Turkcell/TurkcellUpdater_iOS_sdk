@@ -25,7 +25,10 @@
 {
     [super viewDidLoad];
     
-    self.urlTextField.text = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
+    //self.urlTextField.text = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
+    
+    self.urlTextField.text = @"https://adeposw.turkcell.com.tr/v1/AUTH_996ea8f6f2714f66bde588cf19fca512/CONTAINER_MAIN/bbac822f-9208-4623-9f2d-047bf18be89a?temp_url_sig=618757660816491752b0ed8086b5a81fbfcd2715&amp;temp_url_expires=1450467338&amp;filename=update.json";
+    
     self.switchButton.on = NO;
 }
 
@@ -39,9 +42,9 @@
     
     NSString *updateServerURL = self.urlTextField.text;
     
-    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL delegate:self postProperties:self.switchButton.on];
+    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL delegate:self postProperties:self.switchButton.on parentViewController:self];
     //UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL preferredLanguage:@"tr" delegate:self postProperties:self.switchButton.on];
-    [self.view addSubview:updaterController];
+    //[self.view addSubview:updaterController];
     [updaterController getUpdateInformation];
     
 }

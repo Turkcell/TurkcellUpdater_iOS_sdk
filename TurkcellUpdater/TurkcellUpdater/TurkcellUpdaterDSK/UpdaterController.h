@@ -26,21 +26,24 @@
 #import <UIKit/UIKit.h>
 #import "UpdaterControllerDelegate.h"
 
-@interface UpdaterController : UIView <UIAlertViewDelegate>
+@interface UpdaterController : NSObject
 
 @property (nonatomic, retain) NSString *updateServerURL;
 @property (nonatomic, assign) id<UpdaterControllerDelegate> updaterControllerDelegate;
 @property (nonatomic, assign) BOOL postProperties;
 @property (nonatomic, strong) NSString *preferredLanguage;
+@property (nonatomic, weak) UIViewController *parentViewController;
 
 + (UpdaterController *) initWithUpdateURL:(NSString *)URL
                                  delegate:(id<UpdaterControllerDelegate>)delegate
-                           postProperties:(BOOL)postProperties;
+                           postProperties:(BOOL)postProperties
+                        parentViewController: (UIViewController *)vc;
 
 + (UpdaterController *) initWithUpdateURL:(NSString *)URL
                         preferredLanguage:(NSString *)preferredLanguage
                                  delegate:(id<UpdaterControllerDelegate>)delegate
-                           postProperties:(BOOL)postProperties;
+                           postProperties:(BOOL)postProperties
+                     parentViewController: (UIViewController *)vc;
 
 - (void) getUpdateInformation;
 

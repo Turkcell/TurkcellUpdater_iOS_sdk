@@ -142,7 +142,7 @@
     NSError *error;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&error];
     
-    //NSLog(@"dict %@", json.description);
+    NSLog(@"dict %@", json.description);
     
     if (json == nil) {
         

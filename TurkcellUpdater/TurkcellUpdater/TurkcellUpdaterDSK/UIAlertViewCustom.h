@@ -25,7 +25,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIAlertViewCustom : UIAlertView
+@interface UIAlertViewCustom : UIAlertController
 
 @property (nonatomic, retain) NSString *targetPackageURL;
 @property (nonatomic, retain) NSString *forceUpdate;
