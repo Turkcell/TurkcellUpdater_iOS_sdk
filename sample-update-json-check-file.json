@@ -1,6 +1,5 @@
 {  
    "packageName":"com.turkcell.TurkcellUpdater",
-   "successMsg":"Ok",
    "updates":[  
       {  
         "filters": {

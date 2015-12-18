@@ -1,7 +1,7 @@
 TurkcellUpdater_iOS_sdk
 ===========================
 
-Turkcell Updater for iOS is developed to help developers easily handle new versions of their apps. Easily show new version Popups in ForceUpdate, ForceExit and Optional categories or you can show Messages to users by defining them in a remote Turkcell Updater configuration file. SDK checks version by using "Bundle versions string, short (CFBundleShortVersionString)" property of the application.
+Turkcell Updater for iOS is developed to help developers easily handle new versions of their apps. Easily show new version Popups in ForceUpdate and Optional categories or you can show Messages to users by defining them in a remote Turkcell Updater configuration file. SDK checks version by using "Bundle versions string, short (CFBundleShortVersionString)" property of the application.
 
 <html>
 <head>
@@ -53,25 +53,6 @@ This documents describes usage and structure configuration files used by Turkcel
 </code>
 </pre>
 
-<h4>Forcing an iOS application to quit</h4>
-<pre>
-<code>
-{
-	"packageName": "com.turkcell.UpdaterSampleApp",
-	"updates": [
-		{
-			 "descriptions": {
-				 "*": {
-					 "message": "New version available",
-				 }
-			 },
-			 "forceExit": true,
-		}
-	]
-}
-</code>
-</pre>
-
 <h4>End of support for older iOS OS versions</h4>
 <pre>
 <code>
@@ -100,7 +81,7 @@ This documents describes usage and structure configuration files used by Turkcel
 					 "message": "iOS version earlier than iOS 6 are not supported.",
 				 }
 			 },
-			 "forceExit": true,
+			 "forceUpdate": true,
 		}
 	]
 }
@@ -190,7 +171,6 @@ Type: Object
 				"*": {
 					"title": "Offer",
 					"message": "New application is avaliable!",
-					"imageUrl": "http://example.com/app2-icon.png"
 					"whatIsNew": "Minor bug fixes",
 					"warnings": "New version requires additional privileges"  
 				}
@@ -245,36 +225,6 @@ For iOS : If device language is English but the application language is Turkish 
 </tr>
 
 <tr>
-<td>targetVersionCode</td>
-<td>Number</td>
-<td>-1</td>
-<td>Android</td>
-<td>Version code of new version. See <a href="#updateEntryNote1">Note #1</a></td>
-<td>Yes for Android application, unless <code>forceExit</code> is <code>true</code></td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>targetGooglePlay</td>
-<td>Boolean</td>
-<td>false</td>
-<td>Android</td>
-<td><code>true</code> New version should be installed from Google Play.</td>
-<td>See <a href="#updateEntryNote2">Note #2</a></td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>targetPackageName</td>
-<td>String</td>
-<td>Current application's packageName</td>
-<td>Android</td>
-<td>Package name of new version.</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
 <td>targetPackageUrl</td>
 <td>String</td>
 <td>null</td>
@@ -292,16 +242,6 @@ For iOS : If device language is English but the application language is Turkish 
 <td><code>true</code> if user should not skip this update and continue to use application. When <code>true</code> "Exit application" option will be displayed to user instead of "Remind me later" option.</td>
 <td>No</td>
 <td>1</td>
-</tr>
-
-<tr>
-<td>forceExit</td>
-<td>Boolean</td>
-<td>false</td>
-<td>All</td>
-<td><code>true</code> if user should not have any option other than exiting application. When <code>true</code> only "Exit application" option will be displayed to user.</td>
-<td>No</td>
-<td>2</td>
 </tr>
 
 <tr>
@@ -406,26 +346,6 @@ If empty strings (&quot;&quot;) or asterisk(&quot;*&quot;) is used as key, it ma
 </tr>
 
 <tr>
-<td>targetGooglePlay</td>
-<td>Boolean</td>
-<td>false</td>
-<td>Android</td>
-<td><code>true</code> if message offers references to an application in Google Play. If it is <code>true</code>, <code>targetPackageName</code> should not be null or empty.</td>
-<td>No</td>
-<td>2</td>
-</tr>
-
-<tr>
-<td>targetPackageName</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>Package name of offered application. If specified one of <code>targetGooglePlay</code> or <code>targetWebsiteUrl</code> properties should be set.</td>
-<td>No</td>
-<td>2</td>
-</tr>
-
-<tr>
 <td>targetWebsiteUrl</td>
 <td>String</td>
 <td>null</td>
@@ -497,8 +417,7 @@ If empty strings (&quot;&quot;) or asterisk(&quot;*&quot;) is used as key, it ma
 	&quot;descriptions&quot;: {
 		&quot;*&quot;: {
 			&quot;title&quot;: &quot;Offer&quot;,
-			&quot;message&quot;: &quot;New application for your tablet is avaliable!&quot;,
-			&quot;imageUrl&quot;: &quot;http://example.com/app2-icon.png&quot;
+			&quot;message&quot;: &quot;New application for your tablet is avaliable!&quot;
 		}
 	},
 	&quot;displayAfterDate&quot;: &quot;2013-01-01&quot;,
@@ -587,45 +506,6 @@ Example value: "1.0.0"
 </tr>
 
 <tr>
-<td>appVersionCode</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-An integer version code of application which is defined in AndroidManifest.xml.<br>
-Example value: "10"
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>appInstallerPackageName</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-Package name of application installed current application. Maybe <code>null</code> if not specified.<br>
-Example value: "com.android.vending" of Google play.
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>deviceApiLevel</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-Version code of Android OS. See <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">Android documentation</a>.<br>
-Example value: "10" for Android 2.3.3.
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
 <td>deviceOsName</td>
 <td>String</td>
 <td>null</td>
@@ -646,19 +526,6 @@ Values: "android", "ios", "windowsphone".
 <td>
 Version name of operating system of device.<br>
 Example value: "2.3.3".
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>deviceBrand</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-Brand name of device.<br>
-Example value: "htc_europe" for HTC Wildfire S.
 </td>
 <td>No</td>
 <td>1</td>
@@ -695,19 +562,6 @@ Example	value: "iPhone2*,iPad1*,iPhone5*"
 </tr>
 
 <tr>
-<td>deviceProduct</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-Product name of the device.<br>
-Example value: "htc_marvel" for HTC Wildfire S.
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
 <td>deviceIsTablet</td>
 <td>String</td>
 <td>null</td>
@@ -731,60 +585,6 @@ Example values: "true", "false".
 Two letter language code of device
 (see: <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a>).<br>
 Example values: "en", "tr", "fr".
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>x-&lt;Application defined key&gt;</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-"x-" is prefix for application defined keys of arbitrary properties.<br>
-Applications may define and add own custom property key-value pairs for application specific filters.
-<br>
-Example values: "x-foo", "x-bar".
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>deviceMcc</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-Mobile country code of device. See <a href="http://en.wikipedia.org/wiki/Mobile_country_code">Mobile country code</a><br>
-Example value: "286" for Turkey.
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>deviceMnc</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-Mobile network code of device. See <a href="http://en.wikipedia.org/wiki/Mobile_country_code">Mobile country code</a><br>
-Example value: "1" for Turkcell.
-</td>
-<td>No</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>updaterLevel</td>
-<td>String</td>
-<td>null</td>
-<td>Android</td>
-<td>
-An integer number that is used to define updater version used by application.<br>
-Example value: "1" for initial version of updater sdk.
 </td>
 <td>No</td>
 <td>1</td>
@@ -873,82 +673,6 @@ Warning text about the update. Any important issues that user should know before
 	"message": "New version available",
 	"whatIsNew": "Minor bug fixes",
 	"warnings": "New version requires additional privileges"
-}
-</code>
-</pre>
-
-</div>
-
-<!-- messageDescriptionEntry -->
-<div id="messageDescriptionEntry" class="entry">
-<h4>Message Description Entry</h4>
-Contains language specific texts that are displayed to user on message dialog.
-<br>
-See <a href="#messageEntry">Message Entry</a>
-<br>
-
-<h5>Structure:</h5>
-Type: Object
-
-<table>
-<tr>
-<th>Property name</th>
-<th>Type</th>
-<th>Default value</th>
-<th>Platforms</th>
-<th>Description</th>
-<th>Required</th>
-<th>Since</th>
-</tr>
-
-<tr>
-<td>title</td>
-<td>String</td>
-<td>null</td>
-<td>All</td>
-<td>
-Text that will be displayed at title of message dialog.
-</td>
-<td>No</td>
-<td>2</td>
-</tr>
-
-<tr>
-<td>message</td>
-<td>String</td>
-<td>null</td>
-<td>All</td>
-<td>
-Text displayed inside message dialog.
-</td>
-<td>Yes</td>
-<td>2</td>
-</tr>
-
-<tr>
-<td>imageUrl</td>
-<td>String</td>
-<td>null</td>
-<td>All</td>
-<td>
-Fully qualified URL of image file that is displayed in message dialog. It should refer to a square PNG or JPEG with preferably at 100x100 pixels size.
-</td>
-<td>No</td>
-<td>2</td>
-</tr>
-
-</table>
-
-<h5>Example:</h5>
-<pre>
-<code>
-{
-	"title": "Offer",
-	"message": "New application is avaliable!",
-	"imageUrl": "http://example.com/app2-icon.png"
-	"whatIsNew": "Minor bug fixes",
-	"warnings": "New version requires additional privileges"                    
-
 }
 </code>
 </pre>

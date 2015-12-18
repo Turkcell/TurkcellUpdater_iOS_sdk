@@ -142,9 +142,9 @@
     NSError *error;
     
 #ifdef DEBUG
+/*
     NSString *jsonString =    @"{"
         "\"packageName\":\"com.turkcell.TurkcellUpdater\","
-        "\"successMsg\":\"Ok\","
         "\"updates\":["
                    "{"
                        "\"filters\": {"
@@ -166,7 +166,10 @@
                    "]"
     "}";
     
+    
     receivedData = [[jsonString dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
+    
+*/
 #endif
     
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&error];
