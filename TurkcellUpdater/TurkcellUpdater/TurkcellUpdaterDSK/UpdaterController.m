@@ -95,44 +95,42 @@
     
     NSLog(@"updateDictionary: %@", updateDictionary.description);
     
+    UIAlertViewCustom * alert;
+    
     if ([[updateDictionary objectForKey:@"forceExit"] isEqualToString:@"true"] || [[updateDictionary objectForKey:@"forceExit"] isEqualToString:@"1"]) {
         
-        UIAlertViewCustom * alert=   [UIAlertViewCustom
-                                      alertControllerWithTitle:[updateDictionary objectForKey:@"alertViewTitle"]
-                                      message:[updateDictionary objectForKey:@"message"]
-                                      preferredStyle:UIAlertControllerStyleAlert];
+        alert =   [UIAlertViewCustom
+                   alertControllerWithTitle:[updateDictionary objectForKey:@"alertViewTitle"]
+                   message:[updateDictionary objectForKey:@"message"]
+                   preferredStyle:UIAlertControllerStyleAlert];
         
-        if ([updateDictionary objectForKey:@"cancelButtonTitle"]) {
-            UIAlertAction* cancel = [UIAlertAction
-                                     actionWithTitle:[updateDictionary objectForKey:@"cancelButtonTitle"] ? [updateDictionary objectForKey:@"cancelButtonTitle"] : @""
-                                     style:UIAlertActionStyleDefault
-                                     handler:^(UIAlertAction * action)
-                                     {
-                                         NSString *forceUpdate = [(UIAlertViewCustom *)alert forceUpdate];
-                                         NSString *targetPackageURL = [(UIAlertViewCustom *)alert targetPackageURL];
-                                         
-                                         if ([forceUpdate isEqualToString:@"true"] || [forceUpdate isEqualToString:@"1"]){
-                                             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:targetPackageURL]];
-                                             [updaterControllerDelegate updateActionChosen];
-                                         }
-                                         else {
-                                             [updaterControllerDelegate updateCheckCompleted];
-                                         }
-                                         [alert dismissViewControllerAnimated:YES completion:nil];
-                                         
-                                     }];
+        if ([updateDictionary objectForKey:@"okButtonTitle"]) {
+            UIAlertAction* install = [UIAlertAction
+                                      actionWithTitle:[updateDictionary objectForKey:@"okButtonTitle"] ? [updateDictionary objectForKey:@"okButtonTitle"] : @""
+                                      style:UIAlertActionStyleDefault
+                                      handler:^(UIAlertAction * action)
+                                      {
+                                          NSString *forceUpdate = [(UIAlertViewCustom *)alert forceUpdate];
+                                          NSString *targetPackageURL = [(UIAlertViewCustom *)alert targetPackageURL];
+                                          
+                                          if ([forceUpdate isEqualToString:@"true"] || [forceUpdate isEqualToString:@"1"]){
+                                              [[UIApplication sharedApplication] openURL:[NSURL URLWithString:targetPackageURL]];
+                                              [updaterControllerDelegate updateActionChosen];
+                                          }
+                                          else {
+                                              [updaterControllerDelegate updateCheckCompleted];
+                                          }
+                                      }];
             
-            [alert addAction:cancel];
+            [alert addAction:install];
         }
-
-        [self.parentViewController presentViewController:alert animated:true completion:nil];
         
-    }else{
-
-        UIAlertViewCustom * alert=   [UIAlertViewCustom
-                                      alertControllerWithTitle:[updateDictionary objectForKey:@"alertViewTitle"]
-                                      message:[updateDictionary objectForKey:@"message"]
-                                      preferredStyle:UIAlertControllerStyleAlert];
+    } else {
+        
+        alert =   [UIAlertViewCustom
+                   alertControllerWithTitle:[updateDictionary objectForKey:@"alertViewTitle"]
+                   message:[updateDictionary objectForKey:@"message"]
+                   preferredStyle:UIAlertControllerStyleAlert];
         
         if ([updateDictionary objectForKey:@"okButtonTitle"]) {
             UIAlertAction* ok = [UIAlertAction
@@ -149,7 +147,7 @@
             
             [alert addAction:ok];
         }
-
+        
         
         if ([updateDictionary objectForKey:@"cancelButtonTitle"]) {
             UIAlertAction* cancel = [UIAlertAction
@@ -173,13 +171,12 @@
             
             [alert addAction:cancel];
         }
-        
-        [alert setTargetPackageURL:[updateDictionary objectForKey:@"targetPackageURL"]];
-        [alert setForceUpdate:[updateDictionary objectForKey:@"forceUpdate"]];
-        [alert setForceExit:[updateDictionary objectForKey:@"forceExit"]];
-        [self.parentViewController presentViewController:alert animated:YES completion:nil];
-
     }
+    
+    [alert setTargetPackageURL:[updateDictionary objectForKey:@"targetPackageURL"]];
+    [alert setForceUpdate:[updateDictionary objectForKey:@"forceUpdate"]];
+    [alert setForceExit:[updateDictionary objectForKey:@"forceExit"]];
+    [self.parentViewController presentViewController:alert animated:YES completion:nil];
 }
 
 - (void) updateCheckFailed:(NSError *)error

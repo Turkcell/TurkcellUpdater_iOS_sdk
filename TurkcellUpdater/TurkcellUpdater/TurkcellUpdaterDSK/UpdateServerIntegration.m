@@ -140,6 +140,36 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSError *error;
+    
+#ifdef DEBUG
+    NSString *jsonString =    @"{"
+        "\"packageName\":\"com.turkcell.TurkcellUpdater\","
+        "\"successMsg\":\"Ok\","
+        "\"updates\":["
+                   "{"
+                       "\"filters\": {"
+                           "\"appVersionName\":\"<=2.7\""
+                       "},"
+                       "\"forceUpdate\":\"true\","
+                       "\"forceExit\":\"false\","
+                       "\"targetWebsiteUrl\": \"https://itunes.apple.com/tr/app/turkcell-online-kamera/id724524441?mt=8\","
+                       "\"descriptions\":{"
+                           "\"en\":{"
+                               "\"message\":\"There is a new version.\","
+                               "\"warnings\":\"Please update your application.\""
+                           "},"
+                           "\"*\":{  "
+                               "\"message\":\"Yeni versiyon tespit edildi.\","
+                               "\"warnings\":\"Lütfen. Güncelleme yapınız.\""
+                           "}"
+                       "}"
+                   "}"
+                   "]"
+    "}";
+    
+    receivedData = [[jsonString dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
+#endif
+    
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&error];
     
     NSLog(@"dict %@", json.description);
