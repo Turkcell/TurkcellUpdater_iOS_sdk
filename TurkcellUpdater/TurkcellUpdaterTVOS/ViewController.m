@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "UpdaterController.h"
 
-@interface ViewController () <UpdaterControllerDelegate>
+@interface ViewController ()
 
 @end
 
@@ -19,18 +19,14 @@
     
     //NSString *updateURL = @"http://127.0.0.1/update.json";
     NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
-    
-    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateURL delegate:self postProperties:NO parentViewController:self];
-    [updaterController getUpdateInformation];
-}
 
-- (void) updateActionChosen
-{
-    NSLog(@"Update action chosen");
-}
-
-- (void) updateCheckCompleted{
-    NSLog(@"Update check completed");
+    [[UpdaterController sharedInstance] checkUpdateURL:updateURL preferredLanguageForTitles:@"tr" parentViewController:self completionHandler:^(UpdateAction updateAction) {
+        if (updateAction == UpdateActionUpdateCheckCompleted) {
+            NSLog(@"Update check completed");
+        } else if (updateAction == UpdateActionUpdateChosen) {
+            NSLog(@"Update action chosen");
+        }
+    }];
 }
 
 @end

@@ -9,11 +9,7 @@
 #import "ViewController.h"
 #import "UpdaterController.h"
 
-
-@interface ViewController () <UpdaterControllerDelegate>
-
-@property (weak, nonatomic) IBOutlet UITextField *urlTextField;
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@interface ViewController ()
 
 @end
 
@@ -22,35 +18,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //self.urlTextField.text = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
-    self.urlTextField.text = @"http://127.0.0.1/update.json";
-    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 - (IBAction)checkForUpdate:(id)sender {
-    self.resultLabel.text = @"";
     
-    NSString *updateServerURL = self.urlTextField.text;
-    
-    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:updateServerURL delegate:self postProperties:NO parentViewController:self];
-    [updaterController getUpdateInformation];
-    
-}
-
-- (void) updateActionChosen
-{
-    self.resultLabel.text = @"Update action chosen";
-
-}
-
-- (void) updateCheckCompleted{
-    self.resultLabel.text = @"Update check completed";
+    NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
+    [[UpdaterController sharedInstance] checkUpdateURL:updateURL preferredLanguageForTitles:@"tr" parentViewController:self completionHandler:^(UpdateAction updateAction) {
+        if (updateAction == UpdateActionUpdateCheckCompleted) {
+            NSLog(@"Update check completed");
+        } else if (updateAction == UpdateActionUpdateChosen) {
+            NSLog(@"Update action chosen");
+        }
+    }];
+                                                
 }
 
 @end

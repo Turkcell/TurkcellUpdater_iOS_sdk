@@ -34,6 +34,8 @@
 #define LABEL_HEIGHT MESSAGEVIEW_HEIGHT / 10.0
 #define LABEL_FONTSIZE 14.0
 
+
+
 @interface UpdaterController() <UpdateCheckDelegate>
 
 @end
@@ -43,44 +45,40 @@
     NSString* _targetWebSiteURL;
 }
 
-@synthesize updateServerURL,updaterControllerDelegate,postProperties,parentViewController;
+@synthesize updateServerURL,parentViewController;
 
-+ (UpdaterController *) initWithUpdateURL:(NSString *)URL
-                                 delegate:(id<UpdaterControllerDelegate>)delegate
-                           postProperties:(BOOL)postProperties
-                     parentViewController: (UIViewController *)vc
++(instancetype)sharedInstance
 {
-    
-    static BOOL showVersionString = YES;
-    
-    if (showVersionString){
-        showVersionString = FALSE;
-    }
-    
-    UpdaterController *updaterController = [[UpdaterController alloc] init];
-    
-    updaterController.postProperties = postProperties;
-    [updaterController setUpdateServerURL:URL];
-    [updaterController setUpdaterControllerDelegate:delegate];
-    [updaterController setParentViewController:vc];
-    //[updaterController setFrame:CGRectMake(0, 0, 0, 0)];
-    return updaterController;
+    static id shared;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        shared = [[self alloc] init];
+    });
+    return shared;
 }
 
-+ (UpdaterController *) initWithUpdateURL:(NSString *)URL
-                        preferredLanguage:(NSString *)preferredLanguage
-                                 delegate:(id<UpdaterControllerDelegate>)delegate
-                           postProperties:(BOOL)postProperties
+- (id)init {
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
+- (void)checkUpdateURL:(NSString *)URL
+                        preferredLanguageForTitles:(NSString *)preferredLanguage
                      parentViewController: (UIViewController *)vc
+                        completionHandler:(void(^)(UpdateAction updateAction))completionBlock
 {
-    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:URL delegate:delegate postProperties:postProperties parentViewController:vc];
+    self.updateServerURL = URL;
+    self.completionBlock = completionBlock;
+    self.parentViewController = vc;
     [Message sharedInstance].preferredLanguage = preferredLanguage;
-    return updaterController;
+    [self getUpdateInformation];
 }
 
 - (void) getUpdateInformation{
     
-    UpdateCheck *updateCheck = [UpdateCheck initWithUpdateServerURL:[self updateServerURL] delegate:self postProperties:self.postProperties];
+    UpdateCheck *updateCheck = [UpdateCheck initWithUpdateServerURL:self.updateServerURL delegate:self postProperties:false];
     [updateCheck update];
 }
 
@@ -89,8 +87,14 @@
 // --------------------------------------------------------------------------------------------------------------------------------------------------
 - (void) updateFound:(NSDictionary *)updateDictionary{
     
-    
     NSLog(@"updateDictionary: %@", updateDictionary.description);
+    
+    if (self.parentViewController == nil) {
+        if (self.completionBlock) {
+            self.completionBlock(UpdateActionUpdateFound);
+        }
+        return;
+    }
     
     UIAlertViewCustom * alert;
     
@@ -112,10 +116,14 @@
                                           
                                           if ([forceUpdate isEqualToString:@"true"] || [forceUpdate isEqualToString:@"1"]){
                                               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:targetPackageURL]];
-                                              [updaterControllerDelegate updateActionChosen];
+                                              if (self.completionBlock) {
+                                                  self.completionBlock(UpdateActionUpdateChosen);
+                                              }
                                           }
                                           else {
-                                              [updaterControllerDelegate updateCheckCompleted];
+                                              if (self.completionBlock) {
+                                                  self.completionBlock(UpdateActionUpdateCheckCompleted);
+                                              }
                                           }
                                       }];
             
@@ -135,7 +143,10 @@
                                  style:UIAlertActionStyleDefault
                                  handler:^(UIAlertAction * action)
                                  {
-                                     [updaterControllerDelegate updateActionChosen];
+                                     if (self.completionBlock) {
+                                         self.completionBlock(UpdateActionUpdateChosen);
+                                     }
+                                     
                                      NSString *targetPackageURL = [(UIAlertViewCustom *)alert targetPackageURL];
                                      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:targetPackageURL]];
                                  }];
@@ -150,7 +161,9 @@
                                      style:UIAlertActionStyleDefault
                                      handler:^(UIAlertAction * action)
                                      {
-                                         [updaterControllerDelegate updateCheckCompleted];
+                                         if (self.completionBlock) {
+                                             self.completionBlock(UpdateActionUpdateCheckCompleted);
+                                         }
                                      }];
             
             [alert addAction:cancel];
@@ -166,61 +179,16 @@
 - (void) updateCheckFailed:(NSError *)error
 {
     NSLog(@"updateCheckFailed %@", [error description]);
-    [updaterControllerDelegate updateCheckCompleted];
+    if (self.completionBlock) {
+        self.completionBlock(UpdateActionUpdateCheckCompleted);
+    }
 }
 
 - (void) updateNotFound{
     NSLog(@"updateNotFound");
-    [updaterControllerDelegate updateCheckCompleted];
+    if (self.completionBlock) {
+        self.completionBlock(UpdateActionUpdateCheckCompleted);
+    }
 }
-
-- (UILabel*)createLabelWithFrame:(CGRect)frame title:(NSString*)title fontSize:(CGFloat)fontSize isBold:(BOOL)isBold alignment:(NSTextAlignment)alignment{
-    UILabel *customLabel = [[UILabel alloc] initWithFrame:frame];
-    [customLabel setBackgroundColor:[UIColor clearColor]];
-    [customLabel setTextColor:[UIColor blackColor]];
-    
-    if (isBold)
-        [customLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:fontSize]];
-    else
-        [customLabel setFont:[UIFont fontWithName:@"Helvetica" size:fontSize]];
-    
-    [customLabel setText:title];
-    [customLabel setTextAlignment:alignment];
-    return customLabel;
-}
-
-- (UITextView*)createTextViewWithFrame:(CGRect)frame title:(NSString*)title fontSize:(CGFloat)fontSize{
-    UITextView *customTextView = [[UITextView alloc] initWithFrame:frame];
-    [customTextView setTextColor:[UIColor blackColor]];
-    [customTextView setBackgroundColor:[UIColor clearColor]];
-    [customTextView setTextAlignment:NSTextAlignmentLeft];
-    [customTextView setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
-    [customTextView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    //[customTextView setUserInteractionEnabled:NO];
-    [customTextView setScrollEnabled:YES];
-    [customTextView setShowsHorizontalScrollIndicator:YES];
-    [customTextView setShowsVerticalScrollIndicator:YES];
-    [customTextView setText:title];
-    return customTextView;
-}
-
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-//                                      MessageViewDelegate
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-- (void) OKButtonClicked{
-    
-    //[[messageView view] removeFromSuperview];
-    [updaterControllerDelegate updateCheckCompleted];
-    
-}
-
-- (void) viewButtonClicked{
-    
-    //[[messageView view] removeFromSuperview];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_targetWebSiteURL]];
-    [updaterControllerDelegate updateActionChosen];
-    
-}
-
 
 @end

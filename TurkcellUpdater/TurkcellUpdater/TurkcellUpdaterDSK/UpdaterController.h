@@ -26,26 +26,26 @@
 #import <UIKit/UIKit.h>
 #import "UpdaterControllerDelegate.h"
 
+typedef NS_ENUM(NSInteger, UpdateAction){
+    UpdateActionNone,
+    UpdateActionUpdateChosen,
+    UpdateActionUpdateCheckCompleted,
+    UpdateActionUpdateFound
+};
+
 @interface UpdaterController : NSObject
 
 @property (nonatomic, retain) NSString *updateServerURL;
-@property (nonatomic, assign) id<UpdaterControllerDelegate> updaterControllerDelegate;
-@property (nonatomic, assign) BOOL postProperties;
 @property (nonatomic, strong) NSString *preferredLanguage;
 @property (nonatomic, weak) UIViewController *parentViewController;
+@property (nonatomic, copy) void(^completionBlock)(UpdateAction updateAction);
 
-+ (UpdaterController *) initWithUpdateURL:(NSString *)URL
-                                 delegate:(id<UpdaterControllerDelegate>)delegate
-                           postProperties:(BOOL)postProperties
-                        parentViewController: (UIViewController *)vc;
++(instancetype)sharedInstance;
 
-+ (UpdaterController *) initWithUpdateURL:(NSString *)URL
-                        preferredLanguage:(NSString *)preferredLanguage
-                                 delegate:(id<UpdaterControllerDelegate>)delegate
-                           postProperties:(BOOL)postProperties
-                     parentViewController: (UIViewController *)vc;
-
-- (void) getUpdateInformation;
+- (void)checkUpdateURL:(NSString *)URL
+     preferredLanguageForTitles:(NSString *)preferredLanguage
+  parentViewController: (UIViewController *)vc
+     completionHandler:(void(^)(UpdateAction updateAction))completionBlock;
 
 @end
 

@@ -65,7 +65,6 @@
         [updateServerIntegration getJsonFromServerByPostingProperties:[self updateServerURL]];
     else
         [updateServerIntegration getJsonFromServer:[self updateServerURL]];
-    
 }
 
 - (void) updateCallback:(NSDictionary *) updateDataDictionary
