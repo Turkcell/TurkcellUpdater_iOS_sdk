@@ -28,7 +28,6 @@
 		98D0573119FD16BB009BECED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D0572F19FD16BB009BECED /* Main.storyboard */; };
 		98D0573319FD16BB009BECED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D0573219FD16BB009BECED /* Images.xcassets */; };
 		98D0573619FD16BB009BECED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D0573419FD16BB009BECED /* LaunchScreen.xib */; };
-		98D0574219FD16BB009BECED /* TurkcellUpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574119FD16BB009BECED /* TurkcellUpdaterTests.m */; };
 		98D0576919FD16FA009BECED /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574D19FD16FA009BECED /* Configuration.m */; };
 		98D0576A19FD16FA009BECED /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0574F19FD16FA009BECED /* Controller.m */; };
 		98D0576C19FD16FA009BECED /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575319FD16FA009BECED /* Filter.m */; };
@@ -40,16 +39,6 @@
 		98D0577519FD16FA009BECED /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576819FD16FA009BECED /* UpdateServerIntegration.m */; };
 		98D4B7F61B569301009EFADB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98D4B7F81B569301009EFADB /* Localizable.strings */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		98D0573C19FD16BB009BECED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 98D0571A19FD16BB009BECED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98D0572119FD16BB009BECED;
-			remoteInfo = TurkcellUpdater;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		98C133871C24055700FC9923 /* TurkcellUpdaterTVOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkcellUpdaterTVOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,9 +60,6 @@
 		98D0573019FD16BB009BECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98D0573219FD16BB009BECED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		98D0573519FD16BB009BECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		98D0573B19FD16BB009BECED /* TurkcellUpdaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurkcellUpdaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98D0574019FD16BB009BECED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98D0574119FD16BB009BECED /* TurkcellUpdaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TurkcellUpdaterTests.m; sourceTree = "<group>"; };
 		98D0574C19FD16FA009BECED /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		98D0574D19FD16FA009BECED /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		98D0574E19FD16FA009BECED /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
@@ -112,13 +98,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98D0573819FD16BB009BECED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -149,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				98D0572419FD16BB009BECED /* TurkcellUpdater */,
-				98D0573E19FD16BB009BECED /* TurkcellUpdaterTests */,
 				98C133881C24055700FC9923 /* TurkcellUpdaterTVOS */,
 				98D0572319FD16BB009BECED /* Products */,
 			);
@@ -159,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				98D0572219FD16BB009BECED /* TurkcellUpdater.app */,
-				98D0573B19FD16BB009BECED /* TurkcellUpdaterTests.xctest */,
 				98C133871C24055700FC9923 /* TurkcellUpdaterTVOS.app */,
 			);
 			name = Products;
@@ -186,23 +163,6 @@
 			children = (
 				98D0572619FD16BB009BECED /* Info.plist */,
 				98D0572719FD16BB009BECED /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		98D0573E19FD16BB009BECED /* TurkcellUpdaterTests */ = {
-			isa = PBXGroup;
-			children = (
-				98D0574119FD16BB009BECED /* TurkcellUpdaterTests.m */,
-				98D0573F19FD16BB009BECED /* Supporting Files */,
-			);
-			path = TurkcellUpdaterTests;
-			sourceTree = "<group>";
-		};
-		98D0573F19FD16BB009BECED /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				98D0574019FD16BB009BECED /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,24 +231,6 @@
 			productReference = 98D0572219FD16BB009BECED /* TurkcellUpdater.app */;
 			productType = "com.apple.product-type.application";
 		};
-		98D0573A19FD16BB009BECED /* TurkcellUpdaterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 98D0574819FD16BB009BECED /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTests" */;
-			buildPhases = (
-				98D0573719FD16BB009BECED /* Sources */,
-				98D0573819FD16BB009BECED /* Frameworks */,
-				98D0573919FD16BB009BECED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				98D0573D19FD16BB009BECED /* PBXTargetDependency */,
-			);
-			name = TurkcellUpdaterTests;
-			productName = TurkcellUpdaterTests;
-			productReference = 98D0573B19FD16BB009BECED /* TurkcellUpdaterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -303,10 +245,6 @@
 					};
 					98D0572119FD16BB009BECED = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					98D0573A19FD16BB009BECED = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 98D0572119FD16BB009BECED;
 					};
 				};
 			};
@@ -326,7 +264,6 @@
 			targets = (
 				98D0572119FD16BB009BECED /* TurkcellUpdater */,
 				98C133861C24055700FC9923 /* TurkcellUpdaterTVOS */,
-				98D0573A19FD16BB009BECED /* TurkcellUpdaterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,13 +289,6 @@
 				98D0577319FD16FA009BECED /* updater_strings.plist in Resources */,
 				98D0573619FD16BB009BECED /* LaunchScreen.xib in Resources */,
 				98D0573319FD16BB009BECED /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98D0573919FD16BB009BECED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,23 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98D0573719FD16BB009BECED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98D0574219FD16BB009BECED /* TurkcellUpdaterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		98D0573D19FD16BB009BECED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 98D0572119FD16BB009BECED /* TurkcellUpdater */;
-			targetProxy = 98D0573C19FD16BB009BECED /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		98C133921C24055700FC9923 /* Main.storyboard */ = {
@@ -593,42 +507,6 @@
 			};
 			name = Release;
 		};
-		98D0574919FD16BB009BECED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TurkcellUpdaterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.turkcell.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkcellUpdater.app/TurkcellUpdater";
-			};
-			name = Debug;
-		};
-		98D0574A19FD16BB009BECED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TurkcellUpdaterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.turkcell.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkcellUpdater.app/TurkcellUpdater";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -639,6 +517,7 @@
 				98C133991C24055700FC9923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98D0571D19FD16BB009BECED /* Build configuration list for PBXProject "TurkcellUpdater" */ = {
 			isa = XCConfigurationList;
@@ -654,15 +533,6 @@
 			buildConfigurations = (
 				98D0574619FD16BB009BECED /* Debug */,
 				98D0574719FD16BB009BECED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98D0574819FD16BB009BECED /* Build configuration list for PBXNativeTarget "TurkcellUpdaterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98D0574919FD16BB009BECED /* Debug */,
-				98D0574A19FD16BB009BECED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
