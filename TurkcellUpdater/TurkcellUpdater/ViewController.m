@@ -28,6 +28,8 @@
             NSLog(@"Update check completed");
         } else if (updateAction == UpdateActionUpdateChosen) {
             NSLog(@"Update action chosen");
+        } else if (updateAction == UpdateActionUpdateFound) {//This case is the result of, if there is an update and no parent viewcontroller to show the update message
+            NSLog(@"Update action chosen");
         }
     }];
                                                 

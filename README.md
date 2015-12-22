@@ -10,9 +10,24 @@ Turkcell Updater for iOS is developed to help developers easily handle new versi
 <body>
 <h2>Update Request Example</h2>
 
+**checkUpdateURL** The address of the update check url.
+
+**preferredLanguageForTitles** The preferred language for alertview titles. You can add localization to Localizable.strings file for localization. You can also make customization of the titles using Localizable.strings. Use "nil" to use the default device language.
+
+**parentViewController** This is used to show the alert controller on the view controller. Use "nil" if you do not want see an alert.
+
+**completionHandler** Completion handler is the callback of the update check. You will get UpdateAction enum as a response.
+
 ```
-    UpdaterController *updaterController = [UpdaterController initWithUpdateURL:@"http://example.com/update.json" delegate:self postProperties:NO parentViewController:self];
-    [updaterController getUpdateInformation];
+    [[UpdaterController sharedInstance] checkUpdateURL:updateURL preferredLanguageForTitles:@"tr" parentViewController:self completionHandler:^(UpdateAction updateAction) {
+        if (updateAction == UpdateActionUpdateCheckCompleted) {
+            NSLog(@"Update check completed");
+        } else if (updateAction == UpdateActionUpdateChosen) {
+            NSLog(@"Update action chosen");
+        } else if (updateAction == UpdateActionUpdateFound) {//This case is the result of, if there is an update and no parent viewcontroller to show the update message
+            NSLog(@"Update action chosen");
+        }
+    }];    
 ```
 #####Sample Update Json
 

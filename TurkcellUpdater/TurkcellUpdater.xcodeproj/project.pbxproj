@@ -21,7 +21,6 @@
 		98C133A51C24057900FC9923 /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576519FD16FA009BECED /* UpdaterController.m */; };
 		98C133A61C24057900FC9923 /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576819FD16FA009BECED /* UpdateServerIntegration.m */; };
 		98C133A71C24058000FC9923 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98D4B7F81B569301009EFADB /* Localizable.strings */; };
-		98C133A81C24058500FC9923 /* updater_strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98D0576319FD16FA009BECED /* updater_strings.plist */; };
 		98D0572819FD16BB009BECED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572719FD16BB009BECED /* main.m */; };
 		98D0572B19FD16BB009BECED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572A19FD16BB009BECED /* AppDelegate.m */; };
 		98D0572E19FD16BB009BECED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0572D19FD16BB009BECED /* ViewController.m */; };
@@ -34,7 +33,6 @@
 		98D0576F19FD16FA009BECED /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575919FD16FA009BECED /* Message.m */; };
 		98D0577119FD16FA009BECED /* UIAlertViewCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0575F19FD16FA009BECED /* UIAlertViewCustom.m */; };
 		98D0577219FD16FA009BECED /* UpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576119FD16FA009BECED /* UpdateCheck.m */; };
-		98D0577319FD16FA009BECED /* updater_strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98D0576319FD16FA009BECED /* updater_strings.plist */; };
 		98D0577419FD16FA009BECED /* UpdaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576519FD16FA009BECED /* UpdaterController.m */; };
 		98D0577519FD16FA009BECED /* UpdateServerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D0576819FD16FA009BECED /* UpdateServerIntegration.m */; };
 		98D4B7F61B569301009EFADB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98D4B7F81B569301009EFADB /* Localizable.strings */; };
@@ -73,7 +71,6 @@
 		98D0576019FD16FA009BECED /* UpdateCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheck.h; sourceTree = "<group>"; };
 		98D0576119FD16FA009BECED /* UpdateCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCheck.m; sourceTree = "<group>"; };
 		98D0576219FD16FA009BECED /* UpdateCheckDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheckDelegate.h; sourceTree = "<group>"; };
-		98D0576319FD16FA009BECED /* updater_strings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = updater_strings.plist; sourceTree = "<group>"; };
 		98D0576419FD16FA009BECED /* UpdaterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterController.h; sourceTree = "<group>"; };
 		98D0576519FD16FA009BECED /* UpdaterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdaterController.m; sourceTree = "<group>"; };
 		98D0576619FD16FA009BECED /* UpdaterControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterControllerDelegate.h; sourceTree = "<group>"; };
@@ -188,7 +185,6 @@
 				98D0576619FD16FA009BECED /* UpdaterControllerDelegate.h */,
 				98D0576719FD16FA009BECED /* UpdateServerIntegration.h */,
 				98D0576819FD16FA009BECED /* UpdateServerIntegration.m */,
-				98D0576319FD16FA009BECED /* updater_strings.plist */,
 				98D4B7F81B569301009EFADB /* Localizable.strings */,
 			);
 			path = TurkcellUpdaterDSK;
@@ -274,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98C133961C24055700FC9923 /* Assets.xcassets in Resources */,
-				98C133A81C24058500FC9923 /* updater_strings.plist in Resources */,
 				98C133A71C24058000FC9923 /* Localizable.strings in Resources */,
 				98C133941C24055700FC9923 /* Main.storyboard in Resources */,
 			);
@@ -286,7 +281,6 @@
 			files = (
 				98D4B7F61B569301009EFADB /* Localizable.strings in Resources */,
 				98D0573119FD16BB009BECED /* Main.storyboard in Resources */,
-				98D0577319FD16FA009BECED /* updater_strings.plist in Resources */,
 				98D0573619FD16BB009BECED /* LaunchScreen.xib in Resources */,
 				98D0573319FD16BB009BECED /* Images.xcassets in Resources */,
 			);
