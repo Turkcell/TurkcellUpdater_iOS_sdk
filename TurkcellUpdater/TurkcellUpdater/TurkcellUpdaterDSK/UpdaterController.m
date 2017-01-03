@@ -35,7 +35,38 @@
 #define LABEL_HEIGHT MESSAGEVIEW_HEIGHT / 10.0
 #define LABEL_FONTSIZE 14.0
 
-@implementation UpdateResult @end
+@implementation UpdateResult
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        if ([dictionary objectForKey:@"message"]) {
+            self.message = dictionary[@"message"];
+        }
+        
+        if ([dictionary objectForKey:@"okButtonTitle"]) {
+            self.okButtonTitle = dictionary[@"okButtonTitle"];
+        }
+        
+        if ([dictionary objectForKey:@"cancelButtonTitle"]) {
+            self.cancelButtonTitle = dictionary[@"cancelButtonTitle"];
+        }
+        
+        if ([dictionary objectForKey:@"targetPackageURL"]) {
+            self.targetURL = [NSURL URLWithString:dictionary[@"targetPackageURL"]];
+        }
+        
+        if ([dictionary objectForKey:@"alertViewTitle"]) {
+            self.title = dictionary[@"alertViewTitle"];
+        }
+        
+        self.isForceUpdate = [Controller checkForceUpdateFromDictionary:dictionary];
+        
+    }
+    return self;
+}
+
+@end
 
 @interface UpdaterController() <UpdateCheckDelegate>
 
@@ -68,21 +99,8 @@
 - (void)checkUpdateURL:(NSString *)URL
 preferredLanguageForTitles:(NSString *)preferredLanguage
   parentViewController: (UIViewController *)vc
-     completionHandler:(void(^)(UpdateAction updateAction))completionBlock
-{
+            completion:(void(^)(UpdateAction updateAction, UpdateResult *updateResult))completionBlock {
     self.updateServerURL = URL;
-    self.completionBlock = completionBlock;
-    self.parentViewController = vc;
-    [Message sharedInstance].preferredLanguage = preferredLanguage;
-    [self getUpdateInformation];
-}
-
-- (void)checkUpdateURL:(NSString *)URL
-preferredLanguageForTitles:(NSString *)preferredLanguage
-  parentViewController: (UIViewController *)vc
-            completion:(void(^)(UpdateResult *updateResult))completionBlock{
-    self.updateServerURL = URL;
-    self.completionBlock = nil;
     self.completion = completionBlock;
     self.parentViewController = vc;
     [Message sharedInstance].preferredLanguage = preferredLanguage;
@@ -99,20 +117,12 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
 // --------------------------------------------------------------------------------------------------------------------------------------------------
 //                                      UpdateCheckDelegate
 // --------------------------------------------------------------------------------------------------------------------------------------------------
-- (void) updateFound:(NSDictionary *)updateDictionary{
-    
+- (void) updateFound:(NSDictionary *)updateDictionary {
     
     if (self.parentViewController == nil) {
-        if (self.completionBlock) {
-            self.completionBlock(UpdateActionUpdateFound);
-        }
-        
         if (self.completion) {
-            UpdateResult *result = [[UpdateResult alloc] init];
-            result.targetURL = [NSURL URLWithString:[updateDictionary objectForKey:@"targetPackageURL"]];
-            result.isShow = ([Controller displayDateIsValidFromDictionary:updateDictionary] && [Controller displayPeriodIsValidFromDictionary:updateDictionary]);
-            result.isForceUpdate = [Controller checkForceUpdateFromDictionary:updateDictionary];
-            self.completion(result);
+            UpdateResult *result = [[UpdateResult alloc] initWithDictionary:updateDictionary];
+            self.completion(UpdateActionUpdateFound, result);
         }
         return;
     }
@@ -137,13 +147,13 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
                                           
                                           if ([forceUpdate isEqualToString:@"true"] || [forceUpdate isEqualToString:@"1"]){
                                               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:targetPackageURL]];
-                                              if (self.completionBlock) {
-                                                  self.completionBlock(UpdateActionUpdateChosen);
+                                              if (self.completion) {
+                                                  self.completion(UpdateActionUpdateChosen, nil);
                                               }
                                           }
                                           else {
-                                              if (self.completionBlock) {
-                                                  self.completionBlock(UpdateActionUpdateCheckCompleted);
+                                              if (self.completion) {
+                                                  self.completion(UpdateActionUpdateCheckCompleted, nil);
                                               }
                                           }
                                       }];
@@ -164,8 +174,8 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
                                  style:UIAlertActionStyleDefault
                                  handler:^(UIAlertAction * action)
                                  {
-                                     if (self.completionBlock) {
-                                         self.completionBlock(UpdateActionUpdateChosen);
+                                     if (self.completion) {
+                                         self.completion(UpdateActionUpdateChosen, nil);
                                      }
                                      
                                      NSString *targetPackageURL = [(UIAlertViewCustom *)alert targetPackageURL];
@@ -182,8 +192,8 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
                                      style:UIAlertActionStyleDefault
                                      handler:^(UIAlertAction * action)
                                      {
-                                         if (self.completionBlock) {
-                                             self.completionBlock(UpdateActionUpdateCheckCompleted);
+                                         if (self.completion) {
+                                             self.completion(UpdateActionUpdateCheckCompleted, nil);
                                          }
                                      }];
             
@@ -199,15 +209,15 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
 - (void) updateCheckFailed:(NSError *)error
 {
     NSLog(@"updateCheckFailed %@", [error description]);
-    if (self.completionBlock) {
-        self.completionBlock(UpdateActionUpdateCheckCompleted);
+    if (self.completion) {
+        self.completion(UpdateActionUpdateCheckCompleted, nil);
     }
 }
 
 - (void) updateNotFound{
     NSLog(@"updateNotFound");
-    if (self.completionBlock) {
-        self.completionBlock(UpdateActionUpdateCheckCompleted);
+    if (self.completion) {
+        self.completion(UpdateActionUpdateCheckCompleted, nil);
     }
 }
 

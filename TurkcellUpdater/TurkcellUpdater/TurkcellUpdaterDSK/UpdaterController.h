@@ -36,7 +36,10 @@ typedef NS_ENUM(NSInteger, UpdateAction){
 @interface UpdateResult : NSObject
 
 @property (nonatomic, strong) NSURL *targetURL;
-@property (nonatomic, assign) BOOL isShow;
+@property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *okButtonTitle;
+@property (nonatomic, strong) NSString *cancelButtonTitle;
 @property (nonatomic, assign) BOOL isForceUpdate;
 
 @end
@@ -48,20 +51,18 @@ typedef NS_ENUM(NSInteger, UpdateAction){
 @property (nonatomic, retain) NSString *updateServerURL;
 @property (nonatomic, strong) NSString *preferredLanguage;
 @property (nonatomic, weak) UIViewController *parentViewController;
-@property (nonatomic, copy) void(^completionBlock)(UpdateAction updateAction);
-@property (nonatomic, copy) void(^completion)(UpdateResult *updateResult);
+@property (nonatomic, copy) void(^completion)(UpdateAction updateAction, UpdateResult *updateResult);
 
 +(instancetype)sharedInstance;
 
-- (void)checkUpdateURL:(NSString *)URL
-preferredLanguageForTitles:(NSString *)preferredLanguage
-  parentViewController: (UIViewController *)vc
-     completionHandler:(void(^)(UpdateAction updateAction))completionBlock;
+/**
+ updateResult object is only used if updateAction is UpdateActionUpdateFound
+ */
 
 - (void)checkUpdateURL:(NSString *)URL
 preferredLanguageForTitles:(NSString *)preferredLanguage
   parentViewController: (UIViewController *)vc
-            completion:(void(^)(UpdateResult *updateResult))completionBlock;
+            completion:(void(^)(UpdateAction updateAction, UpdateResult *updateResult))completionBlock;
 
 @end
 
