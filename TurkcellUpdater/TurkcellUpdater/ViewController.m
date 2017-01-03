@@ -22,8 +22,7 @@
 
 - (IBAction)checkForUpdate:(id)sender {
     
-//    NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
-    NSString *updateURL = @"http:/localhost/test.json";
+    NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
 
 //    [[UpdaterController sharedInstance] checkUpdateURL:updateURL preferredLanguageForTitles:@"tr" parentViewController:self completionHandler:^(UpdateAction updateAction) {
 //        if (updateAction == UpdateActionUpdateCheckCompleted) {
