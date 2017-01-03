@@ -33,19 +33,35 @@ typedef NS_ENUM(NSInteger, UpdateAction){
     UpdateActionUpdateFound
 };
 
+@interface UpdateResult : NSObject
+
+@property (nonatomic, strong) NSURL *targetURL;
+@property (nonatomic, assign) BOOL isShow;
+@property (nonatomic, assign) BOOL isForceUpdate;
+
+@end
+
+
+
 @interface UpdaterController : NSObject
 
 @property (nonatomic, retain) NSString *updateServerURL;
 @property (nonatomic, strong) NSString *preferredLanguage;
 @property (nonatomic, weak) UIViewController *parentViewController;
 @property (nonatomic, copy) void(^completionBlock)(UpdateAction updateAction);
+@property (nonatomic, copy) void(^completion)(UpdateResult *updateResult);
 
 +(instancetype)sharedInstance;
 
 - (void)checkUpdateURL:(NSString *)URL
-     preferredLanguageForTitles:(NSString *)preferredLanguage
+preferredLanguageForTitles:(NSString *)preferredLanguage
   parentViewController: (UIViewController *)vc
      completionHandler:(void(^)(UpdateAction updateAction))completionBlock;
+
+- (void)checkUpdateURL:(NSString *)URL
+preferredLanguageForTitles:(NSString *)preferredLanguage
+  parentViewController: (UIViewController *)vc
+            completion:(void(^)(UpdateResult *updateResult))completionBlock;
 
 @end
 

@@ -59,7 +59,7 @@
     
 }
 
-- (void) update{
+- (void) update {
     UpdateServerIntegration *updateServerIntegration = [UpdateServerIntegration initWithDelegate:self postSelector:@selector(updateCallback:errror:)];
     if (postProperties)
         [updateServerIntegration getJsonFromServerByPostingProperties:[self updateServerURL]];
@@ -99,6 +99,14 @@
         
         NSDictionary *messageDictionary = [Filter getMatchedMessageFromUpdateDataDictionary:updateDataDictionary
                                                                    withCurrentConfiguration:[Configuration getCurrentConfiguration]];
+        
+        if (![Controller displayDateIsValidFromDictionary:updateDictionary]) {
+            return;
+        }
+        
+        if (![Controller displayPeriodIsValidFromDictionary:updateDictionary]) {
+            return;
+        }
         
         if (updateDictionary == nil) {
             
@@ -155,7 +163,7 @@
             if ([forceUpdateString isEqualToString:@"true"] == YES || [forceUpdateString isEqualToString:@"1"]){
                 [alertViewDictionary setValue:nil forKey:@"cancelButtonTitle"];
             }
-
+            
             [alertViewDictionary setValue:okButtonTitle forKey:@"okButtonTitle"];
             
             if (([Controller getTargetPackageURLFromUpdate:updateDictionary] == nil || [[[Controller getTargetPackageURLFromUpdate:updateDictionary] description] length] == 0) &&

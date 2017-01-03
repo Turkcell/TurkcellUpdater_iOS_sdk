@@ -28,13 +28,14 @@
 #import "UpdateCheck.h"
 #import "UIAlertViewCustom.h"
 #import "Message.h"
+#import "Controller.h"
 
 #define MESSAGEVIEW_WIDTH 290.0
 #define MESSAGEVIEW_HEIGHT 200.0
 #define LABEL_HEIGHT MESSAGEVIEW_HEIGHT / 10.0
 #define LABEL_FONTSIZE 14.0
 
-
+@implementation UpdateResult @end
 
 @interface UpdaterController() <UpdateCheckDelegate>
 
@@ -65,15 +66,28 @@
 }
 
 - (void)checkUpdateURL:(NSString *)URL
-                        preferredLanguageForTitles:(NSString *)preferredLanguage
-                     parentViewController: (UIViewController *)vc
-                        completionHandler:(void(^)(UpdateAction updateAction))completionBlock
+preferredLanguageForTitles:(NSString *)preferredLanguage
+  parentViewController: (UIViewController *)vc
+     completionHandler:(void(^)(UpdateAction updateAction))completionBlock
 {
     self.updateServerURL = URL;
     self.completionBlock = completionBlock;
     self.parentViewController = vc;
     [Message sharedInstance].preferredLanguage = preferredLanguage;
     [self getUpdateInformation];
+}
+
+- (void)checkUpdateURL:(NSString *)URL
+preferredLanguageForTitles:(NSString *)preferredLanguage
+  parentViewController: (UIViewController *)vc
+            completion:(void(^)(UpdateResult *updateResult))completionBlock{
+    self.updateServerURL = URL;
+    self.completionBlock = nil;
+    self.completion = completionBlock;
+    self.parentViewController = vc;
+    [Message sharedInstance].preferredLanguage = preferredLanguage;
+    [self getUpdateInformation];
+    
 }
 
 - (void) getUpdateInformation{
@@ -87,11 +101,18 @@
 // --------------------------------------------------------------------------------------------------------------------------------------------------
 - (void) updateFound:(NSDictionary *)updateDictionary{
     
-    NSLog(@"updateDictionary: %@", updateDictionary.description);
     
     if (self.parentViewController == nil) {
         if (self.completionBlock) {
             self.completionBlock(UpdateActionUpdateFound);
+        }
+        
+        if (self.completion) {
+            UpdateResult *result = [[UpdateResult alloc] init];
+            result.targetURL = [NSURL URLWithString:[updateDictionary objectForKey:@"targetPackageURL"]];
+            result.isShow = ([Controller displayDateIsValidFromDictionary:updateDictionary] && [Controller displayPeriodIsValidFromDictionary:updateDictionary]);
+            result.isForceUpdate = [Controller checkForceUpdateFromDictionary:updateDictionary];
+            self.completion(result);
         }
         return;
     }
@@ -169,7 +190,6 @@
             [alert addAction:cancel];
         }
     }
-    
     [alert setTargetPackageURL:[updateDictionary objectForKey:@"targetPackageURL"]];
     [alert setForceUpdate:[updateDictionary objectForKey:@"forceUpdate"]];
     [alert setForceExit:[updateDictionary objectForKey:@"forceExit"]];
