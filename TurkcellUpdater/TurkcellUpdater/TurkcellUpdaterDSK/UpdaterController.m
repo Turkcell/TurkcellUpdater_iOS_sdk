@@ -214,10 +214,16 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
     }
 }
 
-- (void) updateNotFound{
+- (void) updateNotFound {
     NSLog(@"updateNotFound");
     if (self.completion) {
         self.completion(UpdateActionUpdateCheckCompleted, nil);
+    }
+}
+
+- (void)updateNone {
+    if (self.completion) {
+        self.completion(UpdateActionNone, nil);
     }
 }
 

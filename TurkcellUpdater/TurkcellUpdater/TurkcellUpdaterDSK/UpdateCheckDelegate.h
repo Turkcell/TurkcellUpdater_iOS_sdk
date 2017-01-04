@@ -30,5 +30,6 @@
 - (void) updateFound:(NSDictionary *)updateDictionary;
 - (void) updateCheckFailed:(NSError *)error;
 - (void) updateNotFound;
+- (void) updateNone;
 
 @end

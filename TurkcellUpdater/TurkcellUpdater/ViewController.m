@@ -22,16 +22,16 @@
 
 - (IBAction)checkForUpdate:(id)sender {
     
-    NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
-    
-    [[UpdaterController sharedInstance] checkUpdateURL:updateURL preferredLanguageForTitles:@"tr" parentViewController:nil completion:^(UpdateAction updateAction, UpdateResult *updateResult) {
+//    NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
+    NSString *updateURL = @"http://localhost/test.json";
+    [[UpdaterController sharedInstance] checkUpdateURL:updateURL preferredLanguageForTitles:@"tr" parentViewController:self completion:^(UpdateAction updateAction, UpdateResult *updateResult) {
         if (updateAction == UpdateActionUpdateFound) {
             if (updateResult) {
                 NSLog(@"%@", updateResult.message);
             }
         }
         else {
-            if (updateResult) {
+            if (!updateResult) {
                 NSLog(@"NULL");
             }
         }

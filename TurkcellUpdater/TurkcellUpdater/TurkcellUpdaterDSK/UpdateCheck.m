@@ -101,10 +101,12 @@
                                                                    withCurrentConfiguration:[Configuration getCurrentConfiguration]];
         
         if (![Controller displayDateIsValidFromDictionary:updateDictionary]) {
+            [[self updateCheckDelegate] updateNone];
             return;
         }
         
         if (![Controller displayPeriodIsValidFromDictionary:updateDictionary]) {
+            [[self updateCheckDelegate] updateNone];
             return;
         }
         
@@ -153,6 +155,14 @@
             if (([descriptions objectForKey:@"whatIsNew"] != nil) && ([[[descriptions objectForKey:@"whatIsNew"] description] length] > 0)) {
                 message = [message stringByAppendingString:@"\n"];
                 message = [message stringByAppendingString:[descriptions objectForKey:@"whatIsNew"]];
+            }
+            
+            if ([descriptions objectForKey:@"okButtonTitle"]) {
+                okButtonTitle = [descriptions objectForKey:@"okButtonTitle"];
+            }
+            
+            if ([descriptions objectForKey:@"cancelButtonTitle"]) {
+                cancelButtonTitle = [descriptions objectForKey:@"cancelButtonTitle"];
             }
             
             NSMutableDictionary *alertViewDictionary = [[NSMutableDictionary alloc] init];
