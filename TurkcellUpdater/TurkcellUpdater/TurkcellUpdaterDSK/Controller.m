@@ -234,7 +234,8 @@
     NSString *endDateString = dictionary[kEndDate];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
     
     if ([startDateString rangeOfString:@":"].location != NSNotFound) {
         [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
@@ -252,8 +253,11 @@
     }
     NSDate *endDate = [dateFormatter dateFromString:endDateString];
     
-    if (([startDate compare:[NSDate date]] == NSOrderedAscending || [startDate compare:[NSDate date]] == NSOrderedSame) &&
-        ([endDate compare:[NSDate date]] == NSOrderedDescending || [endDate compare:[NSDate date]] == NSOrderedSame)) {
+    
+    NSDate *currentDate = [dateFormatter dateFromString:[dateFormatter stringFromDate:[NSDate date]]];
+    
+    if (([startDate compare:currentDate] == NSOrderedAscending || [startDate compare:currentDate] == NSOrderedSame) &&
+        ([endDate compare:currentDate] == NSOrderedDescending || [endDate compare:currentDate] == NSOrderedSame)) {
         return YES;
     }
     return NO;
@@ -277,7 +281,7 @@
     }
     NSDate *dateOfLastShow = [[NSUserDefaults standardUserDefaults] objectForKey:kDateOfLastShow];
     
-    NSTimeInterval displayPeriodInterval = displayPeriod * 60 * 60;
+    NSTimeInterval displayPeriodInterval = displayPeriod * 60;// * 60;
     
     dateOfLastShow = [dateOfLastShow dateByAddingTimeInterval:displayPeriodInterval];
     

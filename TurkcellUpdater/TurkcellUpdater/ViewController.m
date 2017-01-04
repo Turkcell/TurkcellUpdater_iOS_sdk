@@ -20,10 +20,13 @@
     [super viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self checkForUpdate:nil];
+}
+
 - (IBAction)checkForUpdate:(id)sender {
     
-    NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";
-
+    NSString *updateURL = @"https://dl.dropboxusercontent.com/u/26644626/update.json";    
     [[UpdaterController sharedInstance] checkUpdateURL:updateURL preferredLanguageForTitles:@"tr" parentViewController:self completion:^(UpdateAction updateAction, UpdateResult *updateResult) {
         if (updateAction == UpdateActionUpdateFound) {
             if (updateResult) {
