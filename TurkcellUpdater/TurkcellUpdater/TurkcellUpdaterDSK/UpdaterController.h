@@ -64,5 +64,7 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
   parentViewController: (UIViewController *)vc
             completion:(void(^)(UpdateAction updateAction, UpdateResult *updateResult))completionBlock;
 
+- (BOOL)openAppStoreWithApplicationStoreId:(NSString *)storeId;
+
 @end
 

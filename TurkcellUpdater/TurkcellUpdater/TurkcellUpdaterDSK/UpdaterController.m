@@ -108,6 +108,15 @@ preferredLanguageForTitles:(NSString *)preferredLanguage
     
 }
 
+- (BOOL)openAppStoreWithApplicationStoreId:(NSString *)storeId {
+    if (storeId) {
+        NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", storeId];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        return YES;
+    }
+    return NO;
+}
+
 - (void) getUpdateInformation{
     
     UpdateCheck *updateCheck = [UpdateCheck initWithUpdateServerURL:self.updateServerURL delegate:self postProperties:false];

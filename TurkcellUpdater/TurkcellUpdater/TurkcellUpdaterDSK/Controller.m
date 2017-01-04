@@ -266,7 +266,6 @@
 + (BOOL)displayPeriodIsValidFromDictionary:(NSDictionary *)dictionary {
     
     NSString *kDisplayPeriod = @"displayPeriodInHours";
-    
     if (![dictionary objectForKey:kDisplayPeriod]) {
         return YES;
     }
@@ -281,7 +280,7 @@
     }
     NSDate *dateOfLastShow = [[NSUserDefaults standardUserDefaults] objectForKey:kDateOfLastShow];
     
-    NSTimeInterval displayPeriodInterval = displayPeriod * 60;// * 60;
+    NSTimeInterval displayPeriodInterval = displayPeriod * 60 * 60;
     
     dateOfLastShow = [dateOfLastShow dateByAddingTimeInterval:displayPeriodInterval];
     
